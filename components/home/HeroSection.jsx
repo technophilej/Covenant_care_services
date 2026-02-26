@@ -11,7 +11,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=2000&q=80"
+          src="/images/home/hero.jpg"
           alt="Caring for elderly"
           className="w-full h-full object-cover"
         />
@@ -65,15 +65,15 @@ export default function HeroSection() {
               href="/contact"
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-8 py-4 rounded-full font-semibold shadow-xl shadow-brand-blue-600/20 hover:shadow-brand-blue-600/30 transition-all duration-300 group"
             >
-              Schedule a Consultation
+              Request Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
-              href="tel:+12075551234"
+              href="tel:+12072528470"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold border border-white/20 transition-all duration-300"
             >
               <Phone className="w-5 h-5" />
-              (207) 555-1234
+              (207) 252-8470
             </a>
           </motion.div>
 

@@ -23,7 +23,7 @@ const services = [
       'Toileting assistance',
       'Skin and nail care',
     ],
-    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80',
+    image: '/images/services/personal-care.jpg',
   },
   {
     icon: Home,
@@ -37,7 +37,7 @@ const services = [
       'Light housekeeping',
       'Meal planning and preparation',
     ],
-    image: 'https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=800&q=80',
+    image: '/images/services/companion-care.jpg',
   },
   {
     icon: Users,
@@ -51,7 +51,7 @@ const services = [
       'Overnight care',
       'Flexible scheduling',
     ],
-    image: 'https://images.unsplash.com/photo-1576765608866-5b51046452be?auto=format&fit=crop&w=800&q=80',
+    image: '/images/services/respite-care.jpg',
   },
   {
     icon: Clock,
@@ -65,7 +65,7 @@ const services = [
       'Weekend care',
       'Holiday coverage',
     ],
-    image: 'https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?auto=format&fit=crop&w=800&q=80',
+    image: '/images/services/hourly-live-in.jpg',
   },
   {
     icon: Utensils,
@@ -79,7 +79,7 @@ const services = [
       'Feeding assistance',
       'Kitchen cleanup',
     ],
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80',
+    image: '/images/services/meal-prep.jpg',
   },
   {
     icon: Car,
@@ -93,7 +93,7 @@ const services = [
       'Family visits',
       'Recreational activities',
     ],
-    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80',
+    image: '/images/services/transportation.jpg',
   },
   {
     icon: Pill,
@@ -107,7 +107,7 @@ const services = [
       'Communication with pharmacy',
       'Family updates',
     ],
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80',
+    image: '/images/services/medication-reminders.jpg',
   },
   {
     icon: Brain,
@@ -121,7 +121,7 @@ const services = [
       'Daily routine structure',
       'Family education',
     ],
-    image: 'https://images.unsplash.com/photo-1559825481-12a05cc00344?auto=format&fit=crop&w=800&q=80',
+    image: '/images/services/dementia-care.jpg',
   },
 ];
 

@@ -18,7 +18,7 @@ export default function CTASection() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=1600&q=80"
+              src="/images/home/cta-bg.jpg"
               alt="Happy family"
               className="w-full h-full object-cover opacity-20"
             />
@@ -53,11 +53,11 @@ export default function CTASection() {
               </Link>
 
               <a
-                href="tel:+12075551234"
+                href="tel:+12072528470"
                 className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-full font-semibold transition-all duration-300"
               >
                 <Phone className="w-5 h-5" />
-                Call (207) 555-1234
+                Call (207) 252-8470
               </a>
             </div>
           </div>

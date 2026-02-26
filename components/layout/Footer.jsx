@@ -49,15 +49,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone className="w-5 h-5 text-brand-blue-200" />
-                <span>(207) 555-1234</span>
+                <span>(207) 252-8470</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="w-5 h-5 text-brand-blue-200" />
-                <span>info@covenantcareme.com</span>
+                <span>contact@covenantcareservices.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <MapPin className="w-5 h-5 text-brand-blue-200" />
-                <span>Serving all of Maine</span>
+                <span>40 Gina Street, Lewiston, ME 04240</span>
               </div>
             </div>
 

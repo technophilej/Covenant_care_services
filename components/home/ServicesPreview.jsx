@@ -10,25 +10,25 @@ const services = [
     icon: Heart,
     title: 'Personal Care',
     description: 'Assistance with daily activities including bathing, dressing, grooming, and mobility support.',
-    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80',
+    image: '/images/services/personal-care.jpg',
   },
   {
     icon: Home,
     title: 'Companion Care',
     description: 'Meaningful companionship, conversation, and engagement in activities your loved one enjoys.',
-    image: 'https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=600&q=80',
+    image: '/images/services/companion-care.jpg',
   },
   {
     icon: Users,
     title: 'Respite Care',
     description: 'Temporary relief for family caregivers while ensuring your loved one receives quality care.',
-    image: 'https://images.unsplash.com/photo-1576765608866-5b51046452be?auto=format&fit=crop&w=600&q=80',
+    image: '/images/services/respite-care.jpg',
   },
   {
     icon: Clock,
     title: 'Hourly & Live-In Care',
     description: 'Flexible care options from a few hours a week to round-the-clock live-in assistance.',
-    image: 'https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?auto=format&fit=crop&w=600&q=80',
+    image: '/images/services/hourly-live-in.jpg',
   },
 ];
 

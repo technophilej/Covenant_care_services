@@ -10,21 +10,21 @@ const testimonials = [
     role: 'Daughter of Client',
     content: 'Covenant Care Services has been a blessing for our family. The caregivers are compassionate, professional, and truly care about my mother\'s wellbeing.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=150&q=80',
+    image: '/images/testimonials/person-1.jpg',
   },
   {
     name: 'Robert Johnson',
     role: 'Client',
     content: 'I\'ve been using Covenant Care for six months now, and I couldn\'t be happier. They help me maintain my independence while getting the support I need.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
+    image: '/images/testimonials/person-2.jpg',
   },
   {
     name: 'Susan Williams',
     role: 'Wife of Client',
     content: 'The respite care services gave me much-needed time to rest while knowing my husband was in excellent hands. Thank you, Covenant Care!',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80',
+    image: '/images/testimonials/person-3.jpg',
   },
 ];
 

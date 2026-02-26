@@ -200,7 +200,7 @@ export default function Contact() {
                     </div>
 
                     <img
-                      src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=600&q=80"
+                      src="/images/contact/caregiver-with-client.jpg"
                       alt="Caregiver with client"
                       className="rounded-2xl shadow-lg w-full h-64 object-cover"
                     />
@@ -304,7 +304,7 @@ export default function Contact() {
             <div className="bg-gradient-to-br from-brand-blue-100 to-brand-blue-50 rounded-2xl h-80 flex items-center justify-center relative overflow-hidden">
               <div className="absolute inset-0 opacity-30">
                 <img
-                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80"
+                  src="/images/contact/maine-landscape.jpg"
                   alt="Maine landscape"
                   className="w-full h-full object-cover"
                 />

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,7 +22,11 @@ export default function Navigation() {
 
   const navLinks = [
     { href: '/', label: 'Home', current: pathname === '/' },
+    { href: '/about', label: 'About Us', current: pathname === '/about' },
     { href: '/services', label: 'Services', current: pathname === '/services' },
+    { href: '/client-intake', label: 'Client Intake', current: pathname === '/client-intake' },
+    { href: '/compliance-safety', label: 'Compliance & Safety', current: pathname === '/compliance-safety' },
+    { href: '/careers', label: 'Careers', current: pathname === '/careers' },
     { href: '/contact', label: 'Contact', current: pathname === '/contact' },
   ];
 
@@ -69,17 +73,17 @@ export default function Navigation() {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="tel:+12075551234"
+              href="tel:+12072528470"
               className="flex items-center space-x-2 text-gray-600 hover:text-brand-blue-700 transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="font-medium">(207) 555-1234</span>
+              <span className="font-medium">(207) 252-8470</span>
             </a>
             <Link
               href="/contact"
               className="bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 shadow-lg shadow-brand-blue-600/20"
             >
-              Get Started
+              Request Services
             </Link>
           </div>
 
@@ -121,18 +125,18 @@ export default function Navigation() {
               ))}
               <div className="pt-4 pb-2 border-t border-gray-200">
                 <a
-                  href="tel:+12075551234"
+                  href="tel:+12072528470"
                   className="flex items-center space-x-2 px-3 py-2 text-gray-600 hover:text-brand-blue-700"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>(207) 555-1234</span>
+                  <span>(207) 252-8470</span>
                 </a>
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block mt-2 mx-3 bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-4 py-2 rounded-full font-medium text-center transition-all duration-300"
                 >
-                  Get Started
+                  Request Services
                 </Link>
               </div>
             </div>

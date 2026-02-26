@@ -28,14 +28,14 @@ export default function AboutSection() {
           >
             <div className="relative z-10">
               <img
-                src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80"
+                src="/images/home/about-main.jpg"
                 alt="Caregiver with patient"
                 className="rounded-2xl shadow-2xl"
               />
             </div>
             <div className="absolute -bottom-8 -right-8 w-64 h-64 z-20 hidden lg:block">
               <img
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=400&q=80"
+                src="/images/home/about-secondary.jpg"
                 alt="Happy senior"
                 className="w-full h-full object-cover rounded-2xl shadow-xl border-4 border-white"
               />
