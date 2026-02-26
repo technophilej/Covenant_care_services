@@ -38,7 +38,7 @@ export default function TestimonialsSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block text-green-600 font-semibold text-sm tracking-wider uppercase mb-4"
+            className="inline-block text-brand-blue-700 font-semibold text-sm tracking-wider uppercase mb-4"
           >
             Testimonials
           </motion.span>
@@ -73,8 +73,8 @@ export default function TestimonialsSection() {
               className="bg-gray-50 rounded-2xl p-8 relative"
             >
               {/* Quote Icon */}
-              <div className="absolute -top-4 -left-4 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center">
-                <Quote className="w-6 h-6 text-teal-600" />
+              <div className="absolute -top-4 -left-4 w-12 h-12 bg-brand-blue-100 rounded-full flex items-center justify-center">
+                <Quote className="w-6 h-6 text-brand-blue-700" />
               </div>
 
               {/* Rating */}

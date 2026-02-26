@@ -40,7 +40,7 @@ export default function AboutSection() {
                 className="w-full h-full object-cover rounded-2xl shadow-xl border-4 border-white"
               />
             </div>
-            <div className="absolute -top-8 -left-8 w-32 h-32 bg-teal-500/10 rounded-full blur-3xl" />
+            <div className="absolute -top-8 -left-8 w-32 h-32 bg-brand-blue-500/10 rounded-full blur-3xl" />
             <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-orange-500/10 rounded-full blur-3xl" />
           </motion.div>
 
@@ -50,7 +50,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="inline-block text-green-600 font-semibold text-sm tracking-wider uppercase mb-4">
+            <span className="inline-block text-brand-blue-700 font-semibold text-sm tracking-wider uppercase mb-4">
               About Us
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
@@ -79,7 +79,7 @@ export default function AboutSection() {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-start gap-3"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-blue-600 mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-gray-700">{feature}</span>
                 </motion.div>
               ))}

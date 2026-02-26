@@ -70,7 +70,7 @@ export default function Contact() {
     <Layout>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-teal-600 to-teal-800 overflow-hidden">
+        <section className="relative py-20 bg-gradient-to-br from-brand-blue-700 to-brand-navy overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />
@@ -80,7 +80,7 @@ export default function Contact() {
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-teal-200 text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-brand-blue-100 text-sm font-medium mb-6"
             >
               <Sparkles className="w-4 h-4" />
               Get in Touch
@@ -99,7 +99,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg text-teal-100 max-w-2xl mx-auto"
+              className="text-lg text-brand-blue-100 max-w-2xl mx-auto"
             >
               We're here to answer your questions and help you find the perfect care 
               solution for your family. Reach out today!
@@ -119,14 +119,14 @@ export default function Contact() {
                   transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
                 >
-                  <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4">
-                    <item.icon className="w-6 h-6 text-teal-600" />
+                  <div className="w-12 h-12 bg-brand-blue-100 rounded-xl flex items-center justify-center mb-4">
+                    <item.icon className="w-6 h-6 text-brand-blue-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
                   {item.link ? (
                     <a
                       href={item.link}
-                      className="text-teal-600 hover:text-teal-700 transition-colors"
+                      className="text-brand-blue-700 hover:text-brand-blue-800 transition-colors"
                     >
                       {item.content}
                     </a>
@@ -147,7 +147,7 @@ export default function Contact() {
                 <TabsList className="bg-white shadow-md rounded-full p-1.5 h-auto">
                   <TabsTrigger
                     value="contact"
-                    className="rounded-full px-6 py-3 data-[state=active]:bg-teal-600 data-[state=active]:text-white font-medium transition-all"
+                    className="rounded-full px-6 py-3 data-[state=active]:bg-brand-blue-700 data-[state=active]:text-white font-medium transition-all"
                   >
                     <MessageSquare className="w-4 h-4 mr-2" />
                     Contact Us
@@ -178,7 +178,7 @@ export default function Contact() {
                       of our care coordinators will contact you within 24 hours.
                     </p>
 
-                    <div className="bg-teal-50 rounded-2xl p-6 mb-8">
+                    <div className="bg-brand-blue-50 rounded-2xl p-6 mb-8">
                       <h3 className="font-semibold text-gray-900 mb-4">
                         What Happens Next?
                       </h3>
@@ -190,7 +190,7 @@ export default function Contact() {
                           'Together, we create a personalized care plan',
                         ].map((step, index) => (
                           <li key={index} className="flex items-start gap-3">
-                            <span className="flex-shrink-0 w-6 h-6 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm font-medium">
+                            <span className="flex-shrink-0 w-6 h-6 bg-brand-blue-700 text-white rounded-full flex items-center justify-center text-sm font-medium">
                               {index + 1}
                             </span>
                             <span className="text-gray-700">{step}</span>
@@ -301,7 +301,7 @@ export default function Contact() {
                 Proudly serving families throughout the state of Maine
               </p>
             </div>
-            <div className="bg-gradient-to-br from-teal-100 to-teal-50 rounded-2xl h-80 flex items-center justify-center relative overflow-hidden">
+            <div className="bg-gradient-to-br from-brand-blue-100 to-brand-blue-50 rounded-2xl h-80 flex items-center justify-center relative overflow-hidden">
               <div className="absolute inset-0 opacity-30">
                 <img
                   src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80"
@@ -310,9 +310,9 @@ export default function Contact() {
                 />
               </div>
               <div className="relative text-center">
-                <MapPin className="w-16 h-16 text-teal-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-teal-800">Serving All of Maine</h3>
-                <p className="text-teal-600 mt-2">From Portland to Bangor and everywhere in between</p>
+                <MapPin className="w-16 h-16 text-brand-blue-700 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-brand-navy">Serving All of Maine</h3>
+                <p className="text-brand-blue-700 mt-2">From Portland to Bangor and everywhere in between</p>
               </div>
             </div>
           </div>

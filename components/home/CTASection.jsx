@@ -27,13 +27,13 @@ export default function CTASection() {
           {/* Content */}
           <div className="relative z-10 px-8 py-16 sm:px-16 sm:py-20 text-center">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-              <Heart className="w-5 h-5 text-teal-400" />
-              <span className="text-green-300 font-medium">Start Your Care Journey</span>
+              <Heart className="w-5 h-5 text-brand-blue-200" />
+              <span className="text-brand-blue-100 font-medium">Start Your Care Journey</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 max-w-3xl mx-auto">
               Ready to Experience the{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-400 to-brand-blue-100">
                 Covenant Care Difference?
               </span>
             </h2>
@@ -46,11 +46,12 @@ export default function CTASection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-blue-700 hover:from-green-600 hover:to-blue-800 text-white px-8 py-4 rounded-full font-semibold shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 group"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-8 py-4 rounded-full font-semibold shadow-xl shadow-brand-blue-600/20 hover:shadow-brand-blue-600/30 transition-all duration-300 group"
               >
                 Schedule Free Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
+
               <a
                 href="tel:+12075551234"
                 className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-full font-semibold transition-all duration-300"
@@ -62,8 +63,9 @@ export default function CTASection() {
           </div>
 
           {/* Decorative Elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-brand-blue-500/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />
+
         </motion.div>
       </div>
     </section>

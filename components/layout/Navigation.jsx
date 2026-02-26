@@ -41,9 +41,9 @@ export default function Navigation() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center space-x-2 text-teal-600 font-bold text-xl"
+            className="flex items-center space-x-2 text-brand-blue-700 font-bold text-xl"
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-brand-blue-600 to-brand-blue-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">CC</span>
             </div>
             <span>Covenant Care</span>
@@ -57,8 +57,8 @@ export default function Navigation() {
                 href={link.href}
                 className={`font-medium transition-colors duration-200 ${
                   link.current
-                    ? 'text-teal-600'
-                    : 'text-gray-600 hover:text-teal-600'
+                    ? 'text-brand-blue-700'
+                    : 'text-gray-600 hover:text-brand-blue-700'
                 }`}
               >
                 {link.label}
@@ -70,14 +70,14 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-4">
             <a
               href="tel:+12075551234"
-              className="flex items-center space-x-2 text-gray-600 hover:text-teal-600 transition-colors"
+              className="flex items-center space-x-2 text-gray-600 hover:text-brand-blue-700 transition-colors"
             >
               <Phone className="w-4 h-4" />
               <span className="font-medium">(207) 555-1234</span>
             </a>
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 shadow-lg shadow-teal-500/25"
+              className="bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 shadow-lg shadow-brand-blue-600/20"
             >
               Get Started
             </Link>
@@ -86,7 +86,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-600 hover:text-teal-600 hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-lg text-gray-600 hover:text-brand-blue-700 hover:bg-gray-100 transition-colors"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -112,8 +112,8 @@ export default function Navigation() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block px-3 py-2 rounded-md font-medium transition-colors duration-200 ${
                     link.current
-                      ? 'text-teal-600 bg-teal-50'
-                      : 'text-gray-600 hover:text-teal-600 hover:bg-gray-50'
+                      ? 'text-brand-blue-700 bg-brand-blue-50'
+                      : 'text-gray-600 hover:text-brand-blue-700 hover:bg-gray-50'
                   }`}
                 >
                   {link.label}
@@ -122,7 +122,7 @@ export default function Navigation() {
               <div className="pt-4 pb-2 border-t border-gray-200">
                 <a
                   href="tel:+12075551234"
-                  className="flex items-center space-x-2 px-3 py-2 text-gray-600 hover:text-teal-600"
+                  className="flex items-center space-x-2 px-3 py-2 text-gray-600 hover:text-brand-blue-700"
                 >
                   <Phone className="w-4 h-4" />
                   <span>(207) 555-1234</span>
@@ -130,7 +130,7 @@ export default function Navigation() {
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block mt-2 mx-3 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-4 py-2 rounded-full font-medium text-center transition-all duration-300"
+                  className="block mt-2 mx-3 bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-4 py-2 rounded-full font-medium text-center transition-all duration-300"
                 >
                   Get Started
                 </Link>

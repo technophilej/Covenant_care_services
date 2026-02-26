@@ -62,8 +62,8 @@ export default function ApplicationForm() {
             animate={{ opacity: 1, scale: 1 }}
             className="text-center py-12"
           >
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 className="w-8 h-8 text-green-600" />
+            <div className="w-16 h-16 bg-brand-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle2 className="w-8 h-8 text-brand-blue-700" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-3">Application Submitted!</h3>
             <p className="text-gray-600 mb-6">
@@ -141,17 +141,17 @@ export default function ApplicationForm() {
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                     required
                   />
-                  <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-teal-400 transition-colors">
+                  <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-brand-blue-400 transition-colors">
                     <Upload className="w-10 h-10 text-gray-400 mx-auto mb-3" />
                     <p className="text-gray-600 font-medium">Click to upload your resume</p>
                     <p className="text-sm text-gray-400 mt-1">PDF, DOC, or DOCX (Max 10MB)</p>
                   </div>
                 </div>
               ) : (
-                <div className="flex items-center justify-between bg-teal-50 border border-teal-200 rounded-xl p-4">
+                <div className="flex items-center justify-between bg-brand-blue-50 border border-brand-blue-200 rounded-xl p-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
-                      <FileText className="w-5 h-5 text-teal-600" />
+                    <div className="w-10 h-10 bg-brand-blue-100 rounded-lg flex items-center justify-center">
+                      <FileText className="w-5 h-5 text-brand-blue-700" />
                     </div>
                     <div>
                       <p className="font-medium text-gray-900 truncate max-w-[200px]">
@@ -165,7 +165,7 @@ export default function ApplicationForm() {
                   <button
                     type="button"
                     onClick={removeFile}
-                    className="p-2 hover:bg-teal-100 rounded-lg transition-colors"
+                    className="p-2 hover:bg-brand-blue-100 rounded-lg transition-colors"
                   >
                     <X className="w-5 h-5 text-gray-500" />
                   </button>

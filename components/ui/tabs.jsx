@@ -37,7 +37,7 @@ export function TabsTrigger({ value, children, className = '' }) {
       onClick={() => onValueChange(value)}
       className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
         isActive
-          ? 'bg-white text-teal-600 shadow-sm'
+          ? 'bg-white text-brand-blue-700 shadow-sm'
           : 'text-gray-600 hover:text-gray-900'
       } ${className}`}
     >

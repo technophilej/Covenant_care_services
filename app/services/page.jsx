@@ -130,7 +130,7 @@ export default function Services() {
     <Layout>
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="relative py-24 bg-gradient-to-br from-blue-800 to-blue-950 overflow-hidden">
+        <section className="relative py-24 bg-gradient-to-br from-brand-blue-700 to-brand-navy overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />
@@ -140,7 +140,7 @@ export default function Services() {
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-teal-200 text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-brand-blue-100 text-sm font-medium mb-6"
             >
               <Sparkles className="w-4 h-4" />
               Comprehensive Care Solutions
@@ -159,7 +159,7 @@ export default function Services() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg text-teal-100 max-w-2xl mx-auto"
+              className="text-lg text-brand-blue-100 max-w-2xl mx-auto"
             >
               Discover our comprehensive range of home care services designed to meet 
               the unique needs of every individual and family we serve.
@@ -189,7 +189,7 @@ export default function Services() {
                         alt={service.title}
                         className="rounded-2xl shadow-2xl w-full h-80 object-cover"
                       />
-                      <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg">
+                      <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-gradient-to-br from-brand-blue-600 to-brand-blue-500 rounded-2xl flex items-center justify-center shadow-lg">
                         <service.icon className="w-10 h-10 text-white" />
                       </div>
                     </div>
@@ -207,7 +207,7 @@ export default function Services() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {service.features.map((feature) => (
                         <div key={feature} className="flex items-center gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0" />
+                          <CheckCircle2 className="w-5 h-5 text-brand-blue-600 flex-shrink-0" />
                           <span className="text-gray-700">{feature}</span>
                         </div>
                       ))}
@@ -237,7 +237,7 @@ export default function Services() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href={createPageUrl('Contact')}
-                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold shadow-xl shadow-teal-500/25 hover:shadow-teal-500/40 transition-all duration-300 group"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-8 py-4 rounded-full font-semibold shadow-xl shadow-brand-blue-600/20 hover:shadow-brand-blue-600/30 transition-all duration-300 group"
                 >
                   Request a Consultation
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

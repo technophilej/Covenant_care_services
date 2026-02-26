@@ -42,7 +42,7 @@ export default function ServicesPreview() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block text-green-600 font-semibold text-sm tracking-wider uppercase mb-4"
+            className="inline-block text-brand-blue-700 font-semibold text-sm tracking-wider uppercase mb-4"
           >
             Our Services
           </motion.span>
@@ -85,12 +85,12 @@ export default function ServicesPreview() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center shadow-lg">
+                <div className="absolute bottom-4 left-4 w-12 h-12 bg-brand-blue-700 rounded-xl flex items-center justify-center shadow-lg">
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue-700 transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -110,7 +110,7 @@ export default function ServicesPreview() {
         >
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold shadow-xl shadow-teal-500/25 hover:shadow-teal-500/40 transition-all duration-300 group"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-8 py-4 rounded-full font-semibold shadow-xl shadow-brand-blue-600/20 hover:shadow-brand-blue-600/30 transition-all duration-300 group"
           >
             View All Services
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

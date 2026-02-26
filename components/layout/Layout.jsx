@@ -39,14 +39,14 @@ export default function Layout({ children }) {
   return (
     <div className="min-h-screen bg-white">
       {/* Top Bar */}
-      <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-2 px-4">
+      <div className="bg-gradient-to-r from-brand-navy to-brand-blue-800 text-white py-2 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+12075551234" className="flex items-center gap-2 hover:text-teal-200 transition-colors">
+            <a href="tel:+12075551234" className="flex items-center gap-2 hover:text-brand-blue-100 transition-colors">
               <Phone className="w-4 h-4" />
               <span className="hidden sm:inline">(207) 555-1234</span>
             </a>
-            <a href="mailto:info@covenantcareme.com" className="flex items-center gap-2 hover:text-teal-200 transition-colors">
+            <a href="mailto:info@covenantcareme.com" className="flex items-center gap-2 hover:text-brand-blue-100 transition-colors">
               <Mail className="w-4 h-4" />
               <span className="hidden sm:inline">info@covenantcareme.com</span>
             </a>
@@ -83,23 +83,22 @@ export default function Layout({ children }) {
                   href={link.path}
                   className={`relative font-medium transition-colors py-2 ${
                     currentPageName === link.page
-                      ? 'text-blue-700'
-                      : 'text-gray-700 hover:text-blue-700'
+                      ? 'text-brand-blue-700'
+                      : 'text-gray-700 hover:text-brand-blue-700'
                   }`}
                 >
                   {link.name}
                   {currentPageName === link.page && (
                     <motion.div
                       layoutId="activeNav"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-700 rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-blue-600 rounded-full"
                     />
                   )}
                 </Link>
               ))}
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-coral-500 to-coral-600 hover:from-coral-600 hover:to-coral-700 text-white px-6 py-2.5 rounded-full font-medium shadow-lg shadow-coral-500/25 hover:shadow-coral-500/40 transition-all duration-300"
-                style={{ background: 'linear-gradient(135deg, #f97316, #ea580c)' }}
+                className="bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-6 py-2.5 rounded-full font-medium shadow-lg shadow-brand-blue-600/20 hover:shadow-brand-blue-600/30 transition-all duration-300"
               >
                 Get Started
               </Link>
@@ -132,7 +131,7 @@ export default function Layout({ children }) {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
                           currentPageName === link.page
-                            ? 'bg-blue-50 text-blue-700'
+                            ? 'bg-brand-blue-50 text-brand-blue-700'
                             : 'text-gray-700 hover:bg-gray-50'
                         }`}
                   >
@@ -173,13 +172,13 @@ export default function Layout({ children }) {
                 We're dedicated to helping your loved ones live comfortably and safely at home.
               </p>
               <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-green-500 rounded-lg flex items-center justify-center transition-colors">
+                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-brand-blue-600 rounded-lg flex items-center justify-center transition-colors">
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-green-500 rounded-lg flex items-center justify-center transition-colors">
+                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-brand-blue-600 rounded-lg flex items-center justify-center transition-colors">
                   <Instagram className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-green-500 rounded-lg flex items-center justify-center transition-colors">
+                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-brand-blue-600 rounded-lg flex items-center justify-center transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
               </div>
@@ -193,7 +192,7 @@ export default function Layout({ children }) {
                   <li key={link.page}>
                     <Link
                       href={link.path}
-                      className="text-gray-400 hover:text-teal-400 transition-colors"
+                      className="text-gray-400 hover:text-brand-blue-200 transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -202,7 +201,7 @@ export default function Layout({ children }) {
                 <li>
                   <Link
                     href="/contact?tab=careers"
-                    className="text-gray-400 hover:text-teal-400 transition-colors"
+                    className="text-gray-400 hover:text-brand-blue-200 transition-colors"
                   >
                     Careers
                   </Link>
@@ -215,25 +214,25 @@ export default function Layout({ children }) {
               <h4 className="text-lg font-semibold mb-6">Contact Us</h4>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-teal-400 mt-0.5" />
+                  <Phone className="w-5 h-5 text-brand-blue-200 mt-0.5" />
                   <div>
                     <p className="text-gray-400">Call Us</p>
-                    <a href="tel:+12075551234" className="hover:text-teal-400 transition-colors">
+                    <a href="tel:+12075551234" className="hover:text-brand-blue-200 transition-colors">
                       (207) 555-1234
                     </a>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-teal-400 mt-0.5" />
+                  <Mail className="w-5 h-5 text-brand-blue-200 mt-0.5" />
                   <div>
                     <p className="text-gray-400">Email</p>
-                    <a href="mailto:info@covenantcareme.com" className="hover:text-teal-400 transition-colors">
+                    <a href="mailto:info@covenantcareme.com" className="hover:text-brand-blue-200 transition-colors">
                       info@covenantcareme.com
                     </a>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-teal-400 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-brand-blue-200 mt-0.5" />
                   <div>
                     <p className="text-gray-400">Service Area</p>
                     <p>All of Maine</p>

@@ -41,8 +41,8 @@ export default function ContactForm() {
             animate={{ opacity: 1, scale: 1 }}
             className="text-center py-12"
           >
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 className="w-8 h-8 text-green-600" />
+            <div className="w-16 h-16 bg-brand-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle2 className="w-8 h-8 text-brand-blue-700" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-3">Message Sent!</h3>
             <p className="text-gray-600 mb-6">
@@ -119,7 +119,7 @@ export default function ContactForm() {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full h-12 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-semibold rounded-xl shadow-lg shadow-teal-500/25"
+              className="w-full h-12 bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white font-semibold rounded-xl shadow-lg shadow-brand-blue-600/20"
             >
               {isSubmitting ? (
                 <>
