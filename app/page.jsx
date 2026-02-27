@@ -18,6 +18,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section id="about" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">About Us</h2>
+          <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+            Covenant Care Services LLC supports independence through in-home personal care assistance. We work with families across Maine to help members live safely and with dignity in their own homes.
+          </p>
+        </div>
+      </section>
+
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between gap-6 flex-wrap">
@@ -101,27 +110,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Compliance &amp; Safety</h2>
-          <ul className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
-            {[
-              'Background checks through the Maine Background Check Center',
-              'APS/CPS Screening',
-              'Staff orientation prior to independent work',
-              'Liability insurance coverage',
-              'Annual staff training',
-              'Emergency contingency planning',
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3 bg-white rounded-xl p-5 shadow-sm">
-                <span className="mt-2 w-2 h-2 rounded-full bg-brand-blue-600 flex-shrink-0" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 

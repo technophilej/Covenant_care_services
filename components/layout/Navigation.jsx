@@ -24,6 +24,7 @@ export default function Navigation() {
 
   const navLinks = [
     { href: '/', label: 'Home', current: pathname === '/' },
+    { href: '/#about', label: 'About Us', current: pathname === '/' },
     { href: '/services', label: 'Services', current: pathname === '/services' },
     { href: '/contact', label: 'Contact', current: pathname === '/contact' },
   ];

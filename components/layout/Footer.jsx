@@ -9,7 +9,6 @@ export default function Footer() {
 
   const footerLinks = {
     legal: [
-      { href: '/contact#privacy', label: 'Privacy Policy' },
       { href: '/contact?tab=careers', label: 'Careers' },
       { href: '/contact', label: 'Contact' },
     ],
