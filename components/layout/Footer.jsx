@@ -8,22 +8,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
-    services: [
-      { href: '/services', label: 'Personal Care' },
-      { href: '/services', label: 'Companion Care' },
-      { href: '/services', label: 'Respite Care' },
-      { href: '/services', label: 'Live-In Care' },
-    ],
-    company: [
-      { href: '/about', label: 'About Us' },
-      { href: '/contact', label: 'Contact' },
-      { href: '/careers', label: 'Careers' },
-      { href: '/blog', label: 'Blog' },
-    ],
     legal: [
-      { href: '/privacy', label: 'Privacy Policy' },
-      { href: '/terms', label: 'Terms of Service' },
-      { href: '/hipaa', label: 'HIPAA Compliance' },
+      { href: '/contact#privacy', label: 'Privacy Policy' },
+      { href: '/contact?tab=careers', label: 'Careers' },
+      { href: '/contact', label: 'Contact' },
     ],
   };
 
@@ -37,7 +25,7 @@ export default function Footer() {
               <div className="w-10 h-10 bg-gradient-to-br from-brand-blue-600 to-brand-blue-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">CC</span>
               </div>
-              <span className="text-xl font-bold">Covenant Care Services</span>
+              <span className="text-xl font-bold">Covenant Care Services LLC</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Providing compassionate home care solutions throughout Maine, 
@@ -52,12 +40,20 @@ export default function Footer() {
                 <span>(207) 252-8470</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
+                <Phone className="w-5 h-5 text-brand-blue-200" />
+                <span>Fax: (207) 601-3590</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="w-5 h-5 text-brand-blue-200" />
                 <span>contact@covenantcareservices.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <MapPin className="w-5 h-5 text-brand-blue-200" />
-                <span>40 Gina Street, Lewiston, ME 04240</span>
+                <span>
+                  40 Gina Street
+                  <br />
+                  Lewiston, ME 04240
+                </span>
               </div>
             </div>
 
@@ -84,43 +80,9 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services Links */}
+          {/* Footer Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-brand-blue-200 transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-brand-blue-200 transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <h3 className="text-lg font-semibold mb-4">Links</h3>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.label}>

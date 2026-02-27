@@ -243,11 +243,11 @@ export default function Services() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href="tel:+12075551234"
+                  href="tel:+12072528470"
                   className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300 border border-gray-200"
                 >
                   <Phone className="w-5 h-5" />
-                  (207) 555-1234
+                  (207) 252-8470
                 </a>
               </div>
             </motion.div>

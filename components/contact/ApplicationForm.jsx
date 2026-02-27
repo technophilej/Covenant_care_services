@@ -118,12 +118,12 @@ export default function ApplicationForm() {
             <div className="space-y-2">
               <Label htmlFor="app-phone">Phone Number *</Label>
               <Input
-                id="app-phone"
+                id="phone"
                 name="phone"
                 type="tel"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="(207) 555-1234"
+                placeholder="(207) 252-8470"
                 required
                 className="h-12"
               />

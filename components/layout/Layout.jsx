@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <main className="pt-16">{children}</main>
+      <main className="pt-28">{children}</main>
       <Footer />
     </div>
   );

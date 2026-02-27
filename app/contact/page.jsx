@@ -15,14 +15,14 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    content: '(207) 555-1234',
-    link: 'tel:+12075551234',
+    content: '(207) 252-8470',
+    link: 'tel:+12072528470',
   },
   {
     icon: Mail,
     title: 'Email',
-    content: 'info@covenantcareme.com',
-    link: 'mailto:info@covenantcareme.com',
+    content: 'contact@covenantcareservices.com',
+    link: 'mailto:contact@covenantcareservices.com',
   },
   {
     icon: MapPin,
@@ -315,6 +315,18 @@ export default function Contact() {
                 <p className="text-brand-blue-700 mt-2">From Portland to Bangor and everywhere in between</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section id="privacy" className="py-16 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900">Privacy Policy</h2>
+            <p className="mt-6 text-gray-700 leading-relaxed">
+              Covenant Care Services LLC respects your privacy. Information submitted through our forms is used only to respond to your request and to coordinate services or employment inquiries. We do not sell your personal information.
+            </p>
+            <p className="mt-4 text-gray-700 leading-relaxed">
+              If you have questions about privacy, contact us at contact@covenantcareservices.com or call (207) 252-8470.
+            </p>
           </div>
         </section>
       </div>

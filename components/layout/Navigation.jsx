@@ -102,7 +102,7 @@ export default function Navigation() {
                 href="/contact"
                 className="bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-7 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-lg shadow-brand-blue-600/20"
               >
-                Get Started
+                Request Services
               </Link>
             </div>
 
@@ -143,7 +143,7 @@ export default function Navigation() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block mt-2 mx-3 bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-4 py-2.5 rounded-full font-semibold text-center transition-all duration-300"
                 >
-                  Get Started
+                  Request Services
                 </Link>
               </div>
             </motion.div>

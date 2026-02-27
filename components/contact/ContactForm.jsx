@@ -100,7 +100,7 @@ export default function ContactForm() {
                 type="tel"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="(207) 555-1234"
+                placeholder="(207) 252-8470"
                 className="h-12"
               />
             </div>
