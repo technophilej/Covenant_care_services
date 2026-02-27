@@ -12,7 +12,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <div className="w-16 h-16 bg-white/10 rounded-md mb-6" />
+            <div className="inline-flex items-center justify-center bg-white rounded-2xl p-4 shadow-2xl shadow-black/30 mb-6">
+              <img
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699d184dd0f6d95225007a40/5a5b59179_2c0df5d6-aca3-46d0-91b1-302cde780ad2.JPG"
+                alt="Covenant Care Services LLC"
+                className="h-20 w-auto"
+              />
+            </div>
             <p className="text-gray-300 leading-relaxed max-w-sm">
               Providing compassionate, professional home care services throughout Maine. We're dedicated to helping your loved ones live comfortably and safely at home.
             </p>
