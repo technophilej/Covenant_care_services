@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, MapPin, Heart, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 export default function Footer() {
@@ -13,9 +14,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <div className="inline-flex items-center justify-center bg-white rounded-2xl p-4 shadow-2xl shadow-black/30 mb-6">
-              <img
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699d184dd0f6d95225007a40/5a5b59179_2c0df5d6-aca3-46d0-91b1-302cde780ad2.JPG"
+              <Image
+                src="/images/logo.jpg"
                 alt="Covenant Care Services LLC"
+                width={320}
+                height={120}
                 className="h-20 w-auto"
               />
             </div>

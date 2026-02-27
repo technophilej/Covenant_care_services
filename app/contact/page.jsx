@@ -1,15 +1,25 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, Clock, MessageSquare, Briefcase, 
-  Heart, Users, Award, Sparkles 
-} from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
+import Layout from '../../components/layout/Layout';
 import ContactForm from '../../components/contact/ContactForm';
 import ApplicationForm from '../../components/contact/ApplicationForm';
-import Layout from '../../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Send,
+  Heart,
+  Users,
+  Sparkles,
+  MessageSquare,
+  Briefcase,
+  Award,
+} from 'lucide-react';
+import Image from 'next/image';
 
 const contactInfo = [
   {
@@ -199,11 +209,15 @@ export default function Contact() {
                       </ul>
                     </div>
 
-                    <img
-                      src="/images/contact/caregiver-with-client.jpg"
-                      alt="Caregiver with client"
-                      className="rounded-2xl shadow-lg w-full h-64 object-cover"
-                    />
+                    <div className="relative w-full h-64">
+                      <Image
+                        src="/images/contact/caregiver-with-client.jpg"
+                        alt="Caregiver with client"
+                        fill
+                        sizes="(min-width: 1024px) 50vw, 100vw"
+                        className="rounded-2xl shadow-lg object-cover"
+                      />
+                    </div>
                   </motion.div>
 
                   {/* Right Column - Form */}
@@ -303,10 +317,12 @@ export default function Contact() {
             </div>
             <div className="bg-gradient-to-br from-brand-blue-100 to-brand-blue-50 rounded-2xl h-80 flex items-center justify-center relative overflow-hidden">
               <div className="absolute inset-0 opacity-30">
-                <img
+                <Image
                   src="/images/contact/maine-landscape.jpg"
                   alt="Maine landscape"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(min-width: 1024px) 1024px, 100vw"
+                  className="object-cover"
                 />
               </div>
               <div className="relative text-center">

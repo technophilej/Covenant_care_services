@@ -3,10 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
 
-const LOGO_URL = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699d184dd0f6d95225007a40/5a5b59179_2c0df5d6-aca3-46d0-91b1-302cde780ad2.JPG";
+const LOGO_URL = '/images/logo.jpg';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -73,9 +74,12 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <img
+              <Image
                 src={LOGO_URL}
                 alt="Covenant Care Services LLC"
+                width={240}
+                height={80}
+                priority
                 className="h-14 w-auto"
               />
             </Link>

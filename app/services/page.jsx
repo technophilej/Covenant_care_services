@@ -1,13 +1,12 @@
 'use client'
 
 import React from 'react';
-import Link from 'next/link';
-import { createPageUrl } from '../../components/lib/utils';
 import { motion } from 'framer-motion';
 import { 
   Heart, Home, Users, Clock, Utensils, Car, Pill,
   Brain, Sparkles, Phone, ArrowRight, CheckCircle2 
 } from 'lucide-react';
+import Image from 'next/image';
 import Layout from '../../components/layout/Layout';
 
 const services = [
@@ -184,11 +183,15 @@ export default function Services() {
                   {/* Image */}
                   <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                     <div className="relative">
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className="rounded-2xl shadow-2xl w-full h-80 object-cover"
-                      />
+                      <div className="relative w-full h-80">
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          fill
+                          sizes="(min-width: 1024px) 50vw, 100vw"
+                          className="rounded-2xl shadow-2xl object-cover"
+                        />
+                      </div>
                       <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-gradient-to-br from-brand-blue-600 to-brand-blue-500 rounded-2xl flex items-center justify-center shadow-lg">
                         <service.icon className="w-10 h-10 text-white" />
                       </div>
@@ -235,13 +238,13 @@ export default function Services() {
                 a personalized care plan that meets your family's unique needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href={createPageUrl('Contact')}
+                <a
+                  href="/contact"
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-8 py-4 rounded-full font-semibold shadow-xl shadow-brand-blue-600/20 hover:shadow-brand-blue-600/30 transition-all duration-300 group"
                 >
                   Request a Consultation
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
                 <a
                   href="tel:+12072528470"
                   className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300 border border-gray-200"
