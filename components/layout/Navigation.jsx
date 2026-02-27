@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Menu, X, Phone } from 'lucide-react';
 
+const LOGO_URL = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699d184dd0f6d95225007a40/5a5b59179_2c0df5d6-aca3-46d0-91b1-302cde780ad2.JPG";
+
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -41,25 +43,23 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center space-x-2 text-brand-blue-700 font-bold text-xl"
-          >
-            <div className="w-8 h-8 bg-gradient-to-br from-brand-blue-600 to-brand-blue-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">CC</span>
-            </div>
-            <span>Covenant Care</span>
+          <Link href="/" className="flex items-center">
+            <img
+              src={LOGO_URL}
+              alt="Covenant Care Services LLC"
+              className="h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-medium transition-colors duration-200 ${
+                className={`font-medium transition-colors duration-200 whitespace-nowrap ${
                   link.current
                     ? 'text-brand-blue-700'
                     : 'text-gray-600 hover:text-brand-blue-700'
@@ -71,7 +71,7 @@ export default function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center gap-4">
             <a
               href="tel:+12072528470"
               className="flex items-center space-x-2 text-gray-600 hover:text-brand-blue-700 transition-colors"
