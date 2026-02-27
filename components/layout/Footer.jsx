@@ -113,9 +113,6 @@ export default function Footer() {
         <div className="border-t border-white/10 mt-14 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-2">
             <p className="text-gray-400 text-sm">© {currentYear} Covenant Care Services LLC. All rights reserved.</p>
-            <p className="text-gray-400 text-sm flex items-center">
-              Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> for Maine families
-            </p>
           </div>
         </div>
       </div>
