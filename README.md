@@ -1,6 +1,6 @@
 # Covenant Care Services Website
 
-A modern, responsive home care website built with React, Tailwind CSS, and Framer Motion.
+A modern, responsive home care website built with Next.js (App Router), React, Tailwind CSS, and Framer Motion.
 
 ## About
 
@@ -17,17 +17,19 @@ Covenant Care Services provides compassionate home care solutions throughout Mai
 
 ## Technologies Used
 
-- **React 18** - Frontend framework
-- **React Router** - Client-side routing
+- **Next.js 16 (App Router)** - React framework (routing, bundling, production builds)
+- **React 19** - UI library
 - **Tailwind CSS** - Utility-first CSS framework
 - **Framer Motion** - Animation library
 - **Lucide React** - Icon library
+- **Radix UI** - Accessible UI primitives
+- **ESLint** - Linting
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (version 14 or higher)
+- Node.js (modern LTS recommended)
 - npm or yarn package manager
 
 ### Installation
@@ -45,29 +47,34 @@ npm install
 
 3. Start the development server:
 ```bash
-npm start
+npm run dev
 ```
 
 4. Open your browser and navigate to `http://localhost:3000`
 
 ### Available Scripts
 
-- `npm start` - Runs the app in development mode
-- `npm run build` - Builds the app for production
-- `npm test` - Launches the test runner
-- `npm run eject` - Ejects from Create React App (one-way operation)
+- `npm run dev` - Starts the Next.js dev server
+- `npm run build` - Creates a production build
+- `npm run start` - Starts the production server (after `build`)
+- `npm run lint` - Runs ESLint
 
 ## Project Structure
 
 ```
-src/
-├── components/
-│   ├── home/          # Homepage components
-│   ├── contact/       # Contact form components
-│   └── ui/            # Reusable UI components
-├── pages/             # Page components
-├── utils/             # Utility functions
-└── api/               # API configurations
+app/
+├── page.jsx                 # Home (/)
+├── services/page.jsx        # Services (/services)
+└── contact/page.jsx         # Contact (/contact)
+
+components/
+├── contact/                 # Contact + application forms
+├── home/                    # Home page sections
+├── layout/                  # Layout, Navigation, Footer
+└── ui/                      # Reusable UI components
+
+public/
+└── images/                  # Static images
 ```
 
 ## Customization
@@ -78,13 +85,7 @@ The project uses Tailwind CSS for styling. You can customize the theme by modify
 
 ### Forms
 
-Contact forms are currently set up to log submissions to the console. To connect them to a backend service, update the `handleSubmit` functions in:
-- `src/components/contact/ContactForm.jsx`
-- `src/components/contact/ApplicationForm.jsx`
-
-### Routing
-
-Routes are defined using React Router. Add new routes in your main `App.js` file.
+Contact and application forms are client-side and can be connected to an API route or external form backend as needed.
 
 ## Deployment
 
@@ -94,7 +95,7 @@ Routes are defined using React Router. Add new routes in your main `App.js` file
 npm run build
 ```
 
-This creates an optimized production build in the `build` folder.
+This creates an optimized production build.
 
 ### Deploy to Static Hosting
 
@@ -121,8 +122,7 @@ This project is licensed under the MIT License.
 For questions about this website or Covenant Care Services:
 
 - Phone: (207) 555-1234
-- Email: info@covenantcareme.com
-- Website: https://covenantcareme.com
+- Email: info@covenantcareservices.com
 
 ---
 
