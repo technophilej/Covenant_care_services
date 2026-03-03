@@ -30,10 +30,6 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue-500/20 text-brand-blue-100 text-sm font-medium mb-6 backdrop-blur-sm">
-              <Heart className="w-4 h-4" />
-              Compassionate Home Care in Maine
-            </span>
           </motion.div>
 
           <motion.h1
@@ -66,17 +62,19 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row gap-4 mb-12"
           >
             <Link
-              href="/contact"
+              href="/request-services"
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-8 py-4 rounded-full font-semibold shadow-xl shadow-brand-blue-600/20 hover:shadow-brand-blue-600/30 transition-all duration-300 group"
+              suppressHydrationWarning
             >
               Request Services
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" suppressHydrationWarning />
             </Link>
             <a
               href="tel:+12072528470"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold border border-white/20 transition-all duration-300"
+              suppressHydrationWarning
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5" suppressHydrationWarning />
               (207) 252-8470
             </a>
           </motion.div>
@@ -93,8 +91,8 @@ export default function HeroSection() {
               { icon: Users, text: 'Experienced Caregivers' },
               { icon: Heart, text: '24/7 Support Available' },
             ].map((item, index) => (
-              <div key={index} className="flex items-center gap-2 text-gray-300">
-                <item.icon className="w-5 h-5 text-brand-blue-100" />
+              <div key={index} className="flex items-center gap-2 text-gray-300" suppressHydrationWarning>
+                <item.icon className="w-5 h-5 text-brand-blue-100" suppressHydrationWarning />
                 <span className="text-sm font-medium">{item.text}</span>
               </div>
             ))}

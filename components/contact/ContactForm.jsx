@@ -12,6 +12,7 @@ export default function ContactForm() {
     email: '',
     phone: '',
     message: '',
+
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -41,11 +42,11 @@ export default function ContactForm() {
             animate={{ opacity: 1, scale: 1 }}
             className="text-center py-12"
           >
-            <div className="w-16 h-16 bg-brand-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 className="w-8 h-8 text-brand-blue-700" />
+            <div className="w-16 h-16 bg-brand-blue-100 rounded-full flex items-center justify-center mx-auto mb-6" suppressHydrationWarning>
+              <CheckCircle2 className="w-8 h-8 text-brand-blue-700" suppressHydrationWarning />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-3">Message Sent!</h3>
-            <p className="text-gray-600 mb-6">
+            <h3 className="text-2xl font-bold text-brand-navy mb-3">Message Sent!</h3>
+            <p className="text-brand-navy/75 mb-6">
               Thank you for reaching out. We'll get back to you within 24 hours.
             </p>
             <Button
@@ -123,12 +124,12 @@ export default function ContactForm() {
             >
               {isSubmitting ? (
                 <>
-                  <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                  <Loader2 className="w-5 h-5 mr-2 animate-spin" suppressHydrationWarning />
                   Sending...
                 </>
               ) : (
                 <>
-                  <Send className="w-5 h-5 mr-2" />
+                  <Send className="w-5 h-5 mr-2" suppressHydrationWarning />
                   Send Message
                 </>
               )}

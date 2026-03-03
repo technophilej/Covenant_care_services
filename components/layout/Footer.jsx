@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, Mail, MapPin, Heart, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -25,26 +25,6 @@ export default function Footer() {
             <p className="text-gray-300 leading-relaxed max-w-sm">
               Providing compassionate, professional home care services throughout Maine. We're dedicated to helping your loved ones live comfortably and safely at home.
             </p>
-            <div className="flex gap-3 mt-8">
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           <div>
@@ -61,11 +41,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </li>
-              <li>
                 <Link href="/contact?tab=careers" className="hover:text-white transition-colors">
                   Careers
                 </Link>
@@ -76,8 +51,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
             <div className="space-y-6 text-gray-300">
-              <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 mt-0.5" />
+              <div className="flex items-start gap-3" suppressHydrationWarning>
+                <Phone className="w-5 h-5 mt-0.5" suppressHydrationWarning />
                 <div>
                   <div className="text-sm">Call Us</div>
                   <a href="tel:+12075551234" className="text-white font-semibold hover:underline">
@@ -86,21 +61,21 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 mt-0.5" />
+              <div className="flex items-start gap-3" suppressHydrationWarning>
+                <Mail className="w-5 h-5 mt-0.5" suppressHydrationWarning />
                 <div>
                   <div className="text-sm">Email</div>
                   <a
-                    href="mailto:info@covenantcareservices.com"
+                    href="mailto:info@covenantcareservices.org"
                     className="text-white font-semibold hover:underline break-all"
                   >
-                    info@covenantcareservices.com
+                    info@covenantcareservices.org
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 mt-0.5" />
+              <div className="flex items-start gap-3" suppressHydrationWarning>
+                <MapPin className="w-5 h-5 mt-0.5" suppressHydrationWarning />
                 <div>
                   <div className="text-sm">Service Area</div>
                   <div className="text-white font-semibold">All of Maine</div>
@@ -113,9 +88,6 @@ export default function Footer() {
         <div className="border-t border-white/10 mt-14 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-2">
             <p className="text-gray-400 text-sm">© {currentYear} Covenant Care Services LLC. All rights reserved.</p>
-            <p className="text-gray-400 text-sm flex items-center">
-              Built with <Heart className="w-4 h-4 mx-1 text-red-500" /> for the Maine community
-            </p>
           </div>
         </div>
       </div>

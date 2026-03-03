@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const LOGO_URL = '/images/logo.jpg';
 
@@ -25,45 +25,16 @@ export default function Navigation() {
 
   const navLinks = [
     { href: '/', label: 'Home', current: pathname === '/' },
-    { href: '/#about', label: 'About Us', current: pathname === '/' },
     { href: '/services', label: 'Services', current: pathname === '/services' },
-    { href: '/contact', label: 'Contact', current: pathname === '/contact' },
+    { href: '/contact?tab=careers', label: 'Careers', current: pathname === '/contact' },
   ];
 
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50"
+      className="relative z-50"
     >
-      {/* Top Info Bar */}
-      <div className="bg-brand-navy text-white py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
-            <div className="flex flex-wrap items-center gap-6">
-              <a
-                href="tel:+12072528470"
-                className="flex items-center gap-2 hover:text-brand-blue-100 transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span>(207) 252-8470</span>
-              </a>
-              <a
-                href="mailto:contact@covenantcareservices.com"
-                className="flex items-center gap-2 hover:text-brand-blue-100 transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span>contact@covenantcareservices.com</span>
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" />
-              <span>Serving All of Maine</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Nav */}
       <div
         className={`transition-all duration-300 ${
@@ -71,16 +42,16 @@ export default function Navigation() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-28">
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
                 src={LOGO_URL}
                 alt="Covenant Care Services LLC"
-                width={240}
-                height={80}
+                width={420}
+                height={140}
                 priority
-                className="h-14 w-auto"
+                className="h-24 w-auto"
               />
             </Link>
 
@@ -93,7 +64,7 @@ export default function Navigation() {
                   className={`font-semibold transition-colors duration-200 whitespace-nowrap ${
                     link.current
                       ? 'text-brand-blue-700'
-                      : 'text-gray-700 hover:text-brand-blue-700'
+                      : 'text-brand-navy hover:text-brand-blue-700'
                   }`}
                 >
                   {link.label}
@@ -104,7 +75,7 @@ export default function Navigation() {
             {/* Desktop CTA */}
             <div className="hidden md:flex items-center">
               <Link
-                href="/contact"
+                href="/request-services"
                 className="bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-7 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-lg shadow-brand-blue-600/20"
               >
                 Request Services
@@ -114,9 +85,10 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg text-gray-700 hover:text-brand-blue-700 hover:bg-gray-100 transition-colors"
+              className="md:hidden p-2 rounded-lg text-brand-navy hover:text-brand-blue-700 hover:bg-gray-100 transition-colors"
+              suppressHydrationWarning
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" suppressHydrationWarning /> : <Menu className="w-6 h-6" suppressHydrationWarning />}
             </button>
           </div>
 
@@ -137,14 +109,14 @@ export default function Navigation() {
                     className={`block px-3 py-2 rounded-md font-medium transition-colors duration-200 ${
                       link.current
                         ? 'text-brand-blue-700 bg-brand-blue-50'
-                        : 'text-gray-700 hover:text-brand-blue-700 hover:bg-gray-50'
+                        : 'text-brand-navy hover:text-brand-blue-700 hover:bg-gray-50'
                     }`}
                   >
                     {link.label}
                   </Link>
                 ))}
                 <Link
-                  href="/contact"
+                  href="/request-services"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block mt-2 mx-3 bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-4 py-2.5 rounded-full font-semibold text-center transition-all duration-300"
                 >

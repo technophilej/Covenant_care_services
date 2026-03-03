@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Layout from '../../components/layout/Layout';
-import ContactForm from '../../components/contact/ContactForm';
 import ApplicationForm from '../../components/contact/ApplicationForm';
 import { motion } from 'framer-motion';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
@@ -15,8 +14,6 @@ import {
   Heart,
   Users,
   Sparkles,
-  MessageSquare,
-  Briefcase,
   Award,
 } from 'lucide-react';
 import Image from 'next/image';
@@ -25,19 +22,19 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    content: '(207) 252-8470',
+    content: ['(207) 252-8470', 'Fax: (207) 601-3590'],
     link: 'tel:+12072528470',
   },
   {
     icon: Mail,
     title: 'Email',
-    content: 'contact@covenantcareservices.com',
-    link: 'mailto:contact@covenantcareservices.com',
+    content: 'contact@covenantcareservices.org',
+    link: 'mailto:contact@covenantcareservices.org',
   },
   {
     icon: MapPin,
-    title: 'Service Area',
-    content: 'All of Maine',
+    title: 'Address',
+    content: '40 Gina Street, Lewiston, ME 04240',
     link: null,
   },
   {
@@ -67,7 +64,7 @@ const benefits = [
 ];
 
 export default function Contact() {
-  const [activeTab, setActiveTab] = useState('contact');
+  const [activeTab, setActiveTab] = useState('careers');
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -87,22 +84,13 @@ export default function Contact() {
           </div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-brand-blue-100 text-sm font-medium mb-6"
-            >
-              <Sparkles className="w-4 h-4" />
-              Get in Touch
-            </motion.span>
-
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-4xl sm:text-5xl font-bold text-white mb-6"
             >
-              Contact Us
+              Careers
             </motion.h1>
 
             <motion.p
@@ -132,16 +120,23 @@ export default function Contact() {
                   <div className="w-12 h-12 bg-brand-blue-100 rounded-xl flex items-center justify-center mb-4">
                     <item.icon className="w-6 h-6 text-brand-blue-700" />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
-                  {item.link ? (
+                  <h3 className="font-semibold text-brand-navy mb-1">{item.title}</h3>
+                  {Array.isArray(item.content) ? (
+                    <div className="text-brand-navy/75 space-y-1">
+                      <a href={item.link} className="text-brand-blue-700 hover:text-brand-blue-800 transition-colors">
+                        {item.content[0]}
+                      </a>
+                      <p className="text-brand-navy/75">{item.content[1]}</p>
+                    </div>
+                  ) : item.link ? (
                     <a
                       href={item.link}
-                      className="text-brand-blue-700 hover:text-brand-blue-800 transition-colors"
+                      className="text-brand-blue-700 hover:text-brand-blue-800 transition-colors break-words"
                     >
                       {item.content}
                     </a>
                   ) : (
-                    <p className="text-gray-600">{item.content}</p>
+                    <p className="text-brand-navy/75">{item.content}</p>
                   )}
                 </motion.div>
               ))}
@@ -156,79 +151,12 @@ export default function Contact() {
               <div className="flex justify-center">
                 <TabsList className="bg-white shadow-md rounded-full p-1.5 h-auto">
                   <TabsTrigger
-                    value="contact"
+                    value="careers"
                     className="rounded-full px-6 py-3 data-[state=active]:bg-brand-blue-700 data-[state=active]:text-white font-medium transition-all"
                   >
-                    <MessageSquare className="w-4 h-4 mr-2" />
-                    Contact Us
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="careers"
-                    className="rounded-full px-6 py-3 data-[state=active]:bg-orange-500 data-[state=active]:text-white font-medium transition-all"
-                  >
-                    <Briefcase className="w-4 h-4 mr-2" />
-                    Join Our Team
                   </TabsTrigger>
                 </TabsList>
               </div>
-
-              <TabsContent value="contact" className="mt-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                  {/* Left Column - Info */}
-                  <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                  >
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                      Let's Start the Conversation
-                    </h2>
-                    <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                      Whether you're looking for care for a loved one or have questions 
-                      about our services, we're here to help. Fill out the form and one 
-                      of our care coordinators will contact you within 24 hours.
-                    </p>
-
-                    <div className="bg-brand-blue-50 rounded-2xl p-6 mb-8">
-                      <h3 className="font-semibold text-gray-900 mb-4">
-                        What Happens Next?
-                      </h3>
-                      <ul className="space-y-3">
-                        {[
-                          'We review your inquiry and care needs',
-                          'A care coordinator contacts you to discuss options',
-                          'We schedule a free in-home consultation',
-                          'Together, we create a personalized care plan',
-                        ].map((step, index) => (
-                          <li key={index} className="flex items-start gap-3">
-                            <span className="flex-shrink-0 w-6 h-6 bg-brand-blue-700 text-white rounded-full flex items-center justify-center text-sm font-medium">
-                              {index + 1}
-                            </span>
-                            <span className="text-gray-700">{step}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="relative w-full h-64">
-                      <Image
-                        src="/images/contact/caregiver-with-client.jpg"
-                        alt="Caregiver with client"
-                        fill
-                        sizes="(min-width: 1024px) 50vw, 100vw"
-                        className="rounded-2xl shadow-lg object-cover"
-                      />
-                    </div>
-                  </motion.div>
-
-                  {/* Right Column - Form */}
-                  <motion.div
-                    initial={{ opacity: 0, x: 30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                  >
-                    <ContactForm />
-                  </motion.div>
-                </div>
-              </TabsContent>
 
               <TabsContent value="careers" className="mt-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -237,13 +165,13 @@ export default function Contact() {
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                   >
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                    <h2 className="text-3xl font-bold text-brand-navy mb-6">
                       Join Our Caregiving Team
                     </h2>
-                    <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                    <p className="text-lg text-brand-navy/75 mb-8 leading-relaxed">
                       Are you passionate about making a difference in people's lives? 
                       We're always looking for compassionate, dedicated caregivers to 
-                      join our team. Apply today and become part of our family.
+                      apply today and become part of our family.
                     </p>
 
                     {/* Benefits */}
@@ -260,10 +188,10 @@ export default function Contact() {
                             <benefit.icon className="w-6 h-6 text-orange-600" />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-gray-900 mb-1">
+                            <h3 className="font-semibold text-brand-navy mb-1">
                               {benefit.title}
                             </h3>
-                            <p className="text-gray-600 text-sm">
+                            <p className="text-brand-navy/75 text-sm">
                               {benefit.description}
                             </p>
                           </div>
@@ -271,11 +199,11 @@ export default function Contact() {
                       ))}
                     </div>
 
-                    <div className="bg-orange-50 rounded-2xl p-6">
-                      <h3 className="font-semibold text-gray-900 mb-3">
+                    <div className="bg-brand-blue-50 rounded-2xl p-6">
+                      <h3 className="font-semibold text-brand-navy mb-3">
                         We Offer:
                       </h3>
-                      <ul className="grid grid-cols-2 gap-2 text-sm text-gray-700">
+                      <ul className="grid grid-cols-2 gap-2 text-sm text-brand-navy/80">
                         {[
                           'Competitive pay',
                           'Flexible scheduling',
@@ -285,11 +213,25 @@ export default function Contact() {
                           'Referral bonuses',
                         ].map((item) => (
                           <li key={item} className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 bg-orange-500 rounded-full" />
+                            <span className="w-1.5 h-1.5 bg-brand-blue-600 rounded-full" />
                             {item}
                           </li>
                         ))}
                       </ul>
+                    </div>
+
+                    <div className="mt-8 bg-white rounded-2xl p-6 shadow-md">
+                      <h3 className="font-semibold text-brand-navy mb-2">Employment Application Form</h3>
+                      <p className="text-sm text-brand-navy/75 mb-4">
+                        Download the PDF, fill it out, then upload it using the form.
+                      </p>
+                      <a
+                        href="/forms/EmploymentApplication.pdf"
+                        download
+                        className="inline-flex items-center justify-center bg-brand-blue-700 hover:bg-brand-blue-800 text-white px-5 py-2.5 rounded-full font-semibold transition-colors"
+                      >
+                        Download Employment Application (PDF)
+                      </a>
                     </div>
                   </motion.div>
 
@@ -310,8 +252,8 @@ export default function Contact() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Service Area</h2>
-              <p className="text-lg text-gray-600">
+              <h2 className="text-3xl font-bold text-brand-navy mb-4">Our Service Area</h2>
+              <p className="text-lg text-brand-navy/75">
                 Proudly serving families throughout the state of Maine
               </p>
             </div>
@@ -336,12 +278,12 @@ export default function Contact() {
 
         <section id="privacy" className="py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900">Privacy Policy</h2>
-            <p className="mt-6 text-gray-700 leading-relaxed">
+            <h2 className="text-3xl font-bold text-brand-navy">Privacy Policy</h2>
+            <p className="mt-6 text-brand-navy/80 leading-relaxed">
               Covenant Care Services LLC respects your privacy. Information submitted through our forms is used only to respond to your request and to coordinate services or employment inquiries. We do not sell your personal information.
             </p>
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              If you have questions about privacy, contact us at contact@covenantcareservices.com or call (207) 252-8470.
+            <p className="mt-4 text-brand-navy/80 leading-relaxed">
+              If you have questions about privacy, contact us at contact@covenantcareservices.org or call (207) 252-8470.
             </p>
           </div>
         </section>
