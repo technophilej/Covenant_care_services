@@ -129,22 +129,13 @@ export default function Services() {
     <Layout>
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="relative py-24 bg-gradient-to-br from-brand-blue-700 to-brand-navy overflow-hidden">
+        <section className="relative py-20 bg-gradient-to-br from-brand-blue-700 to-brand-navy overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />
           </div>
-          
+
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-brand-blue-100 text-sm font-medium mb-6"
-            >
-              <Sparkles className="w-4 h-4" />
-              Comprehensive Care Solutions
-            </motion.span>
-            
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -200,10 +191,10 @@ export default function Services() {
 
                   {/* Content */}
                   <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-3xl font-bold text-brand-navy mb-4">
                       {service.title}
                     </h2>
-                    <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                    <p className="text-lg text-brand-navy/75 mb-8 leading-relaxed">
                       {service.description}
                     </p>
                     
@@ -211,7 +202,7 @@ export default function Services() {
                       {service.features.map((feature) => (
                         <div key={feature} className="flex items-center gap-3">
                           <CheckCircle2 className="w-5 h-5 text-brand-blue-600 flex-shrink-0" />
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-brand-navy/80">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -230,10 +221,10 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-brand-navy mb-6">
                 Ready to Get Started?
               </h2>
-              <p className="text-lg text-gray-600 mb-10">
+              <p className="text-lg text-brand-navy/75 mb-10">
                 Contact us today for a free consultation. We'll work with you to create 
                 a personalized care plan that meets your family's unique needs.
               </p>
@@ -247,7 +238,7 @@ export default function Services() {
                 </a>
                 <a
                   href="tel:+12072528470"
-                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300 border border-gray-200"
+                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-brand-navy px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300 border border-gray-200"
                 >
                   <Phone className="w-5 h-5" />
                   (207) 252-8470

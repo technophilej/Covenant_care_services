@@ -122,10 +122,7 @@ This project is licensed under the MIT License.
 For questions about this website or Covenant Care Services:
 
 - Phone: (207) 555-1234
-- Email: info@covenantcareservices.com
+- Email: info@covenantcareservices.org
 
 ---
-
-Built with ❤️ for the Maine community
-
 

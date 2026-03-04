@@ -62,11 +62,11 @@ export default function ApplicationForm() {
             animate={{ opacity: 1, scale: 1 }}
             className="text-center py-12"
           >
-            <div className="w-16 h-16 bg-brand-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 className="w-8 h-8 text-brand-blue-700" />
+            <div className="w-16 h-16 bg-brand-blue-100 rounded-full flex items-center justify-center mx-auto mb-6" suppressHydrationWarning>
+              <CheckCircle2 className="w-8 h-8 text-brand-blue-700" suppressHydrationWarning />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-3">Application Submitted!</h3>
-            <p className="text-gray-600 mb-6">
+            <h3 className="text-2xl font-bold text-brand-navy mb-3">Application Submitted!</h3>
+            <p className="text-brand-navy/75 mb-6">
               Thank you for your interest in joining our team. We'll review your application
               and contact you within 5-7 business days.
             </p>
@@ -142,22 +142,22 @@ export default function ApplicationForm() {
                     required
                   />
                   <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-brand-blue-400 transition-colors">
-                    <Upload className="w-10 h-10 text-gray-400 mx-auto mb-3" />
-                    <p className="text-gray-600 font-medium">Click to upload your resume</p>
-                    <p className="text-sm text-gray-400 mt-1">PDF, DOC, or DOCX (Max 10MB)</p>
+                    <Upload className="w-10 h-10 text-gray-400 mx-auto mb-3" suppressHydrationWarning />
+                    <p className="text-brand-navy/75 font-medium">Click to upload your resume</p>
+                    <p className="text-sm text-brand-navy/60 mt-1">PDF, DOC, or DOCX (Max 10MB)</p>
                   </div>
                 </div>
               ) : (
                 <div className="flex items-center justify-between bg-brand-blue-50 border border-brand-blue-200 rounded-xl p-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-brand-blue-100 rounded-lg flex items-center justify-center">
-                      <FileText className="w-5 h-5 text-brand-blue-700" />
+                    <div className="w-10 h-10 bg-brand-blue-100 rounded-lg flex items-center justify-center" suppressHydrationWarning>
+                      <FileText className="w-5 h-5 text-brand-blue-700" suppressHydrationWarning />
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900 truncate max-w-[200px]">
+                      <p className="font-medium text-brand-navy truncate max-w-[200px]">
                         {resumeFile.name}
                       </p>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-brand-navy/60">
                         {(resumeFile.size / 1024 / 1024).toFixed(2)} MB
                       </p>
                     </div>
@@ -167,7 +167,7 @@ export default function ApplicationForm() {
                     onClick={removeFile}
                     className="p-2 hover:bg-brand-blue-100 rounded-lg transition-colors"
                   >
-                    <X className="w-5 h-5 text-gray-500" />
+                    <X className="w-5 h-5 text-gray-500" suppressHydrationWarning />
                   </button>
                 </div>
               )}
@@ -192,12 +192,12 @@ export default function ApplicationForm() {
             >
               {isSubmitting ? (
                 <>
-                  <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                  <Loader2 className="w-5 h-5 mr-2 animate-spin" suppressHydrationWarning />
                   Submitting... {uploadProgress}%
                 </>
               ) : (
                 <>
-                  <Upload className="w-5 h-5 mr-2" />
+                  <Upload className="w-5 h-5 mr-2" suppressHydrationWarning />
                   Submit Application
                 </>
               )}
