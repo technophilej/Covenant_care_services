@@ -47,7 +47,6 @@ export default function ApplicationForm() {
     setUploadProgress(80);
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    console.log('Application submitted:', { ...formData, resumeFile });
     setUploadProgress(100);
     setIsSubmitting(false);
     setIsSubmitted(true);

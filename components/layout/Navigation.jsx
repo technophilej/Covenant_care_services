@@ -55,7 +55,7 @@ export default function Navigation() {
         </div>
       </div>
 
-      <div className={`bg-white border-b border-gray-100 transition-all duration-300 ${isScrolled ? '' : ''}`}>
+      <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[96px]">
             <Link href="/" className="flex-shrink-0">

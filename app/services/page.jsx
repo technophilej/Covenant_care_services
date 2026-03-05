@@ -14,7 +14,7 @@ const services = [
     title: 'Personal Care',
     description: 'Our trained caregivers provide compassionate assistance with daily living activities to help maintain dignity and independence.',
     features: ['Bathing and personal hygiene', 'Dressing assistance', 'Grooming and hair care', 'Mobility support', 'Toileting assistance', 'Skin and nail care'],
-    image: 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=800&q=85',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=85',
     accent: 'bg-blue-50 text-brand-blue-700',
   },
   {
@@ -30,7 +30,7 @@ const services = [
     title: 'Respite Care',
     description: 'Temporary relief for family caregivers, allowing them to rest while ensuring quality care continues.',
     features: ['Short-term care coverage', 'Emergency care needs', 'Vacation coverage', 'Weekend relief', 'Overnight care', 'Flexible scheduling'],
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=85',
+    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=85',
     accent: 'bg-teal-50 text-teal-700',
   },
   {
@@ -38,7 +38,7 @@ const services = [
     title: 'Hourly & Live-In Care',
     description: 'Flexible care options ranging from a few hours a week to around-the-clock live-in assistance.',
     features: ['Minimum 4-hour visits', 'Full-day care options', '24/7 live-in care', 'Night shift coverage', 'Weekend care', 'Holiday coverage'],
-    image: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=85',
+    image: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=800&q=85',
     accent: 'bg-indigo-50 text-indigo-700',
   },
   {
@@ -70,7 +70,7 @@ const services = [
     title: "Alzheimer's & Dementia Care",
     description: 'Specialized care for individuals with memory-related conditions, focusing on safety and quality of life.',
     features: ['Memory care activities', 'Cognitive stimulation', 'Wandering prevention', 'Behavior management', 'Daily routine structure', 'Family education'],
-    image: 'https://images.unsplash.com/photo-1516307365426-bea591f05011?w=800&q=85',
+    image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&q=85',
     accent: 'bg-purple-50 text-purple-700',
   },
 ];

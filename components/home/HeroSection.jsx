@@ -8,7 +8,7 @@ export default function HeroSection() {
     <section className="relative min-h-[88vh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&q=85"
+          src="/images/home/hero.jpg"
           alt="Compassionate in-home care"
           fill
           priority
