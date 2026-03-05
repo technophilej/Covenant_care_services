@@ -100,11 +100,11 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/contact/caregiver-with-client.jpg"
+                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=85"
                   alt="Caregiver with client"
                   width={600}
                   height={500}
-                  className="w-full h-[480px] object-cover"
+                  className="w-full h-[480px] object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/40 to-transparent" />
               </div>
@@ -161,11 +161,11 @@ export default function HomePage() {
             <div className="relative order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/home/hero.jpg"
+                  src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&q=85"
                   alt="In-home care process"
                   width={600}
                   height={440}
-                  className="w-full h-[420px] object-cover"
+                  className="w-full h-[420px] object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-brand-navy/50" />
                 <div className="absolute inset-0 flex items-center justify-center">

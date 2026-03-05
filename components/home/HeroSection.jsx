@@ -8,26 +8,26 @@ export default function HeroSection() {
     <section className="relative min-h-[88vh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/home/hero.jpg"
+          src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&q=85"
           alt="Compassionate in-home care"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/92 via-brand-navy/75 to-brand-navy/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/85 to-brand-navy/50" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
         <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 bg-brand-green-500/20 border border-brand-green-400/30 rounded-full px-4 py-1.5 mb-6">
-            <span className="w-2 h-2 rounded-full bg-brand-green-400" />
-            <span className="text-brand-green-300 text-xs font-semibold tracking-wide uppercase">Maine-Based Personal Care Agency</span>
+          <div className="inline-flex items-center gap-2 bg-white/15 border border-white/25 rounded-full px-4 py-1.5 mb-6">
+            <span className="w-2 h-2 rounded-full bg-brand-green-300" />
+            <span className="text-white text-xs font-semibold tracking-wide uppercase">Maine-Based Personal Care Agency</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
             Compassionate Care,{' '}
-            <span className="text-brand-green-400">Right at Home</span>
+            <span className="text-brand-green-300">Right at Home</span>
           </h1>
 
           <p className="text-lg text-blue-100 leading-relaxed mb-10 max-w-xl">

@@ -57,15 +57,15 @@ export default function Navigation() {
 
       <div className={`bg-white border-b border-gray-100 transition-all duration-300 ${isScrolled ? '' : ''}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-[76px]">
+          <div className="flex items-center justify-between h-[96px]">
             <Link href="/" className="flex-shrink-0">
               <Image
                 src="/images/logo.jpg"
                 alt="Covenant Care Services LLC"
-                width={200}
-                height={80}
+                width={240}
+                height={96}
                 priority
-                className="h-16 w-auto"
+                className="h-[84px] w-auto"
               />
             </Link>
 

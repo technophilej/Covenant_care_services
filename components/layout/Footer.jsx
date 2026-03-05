@@ -17,9 +17,9 @@ export default function Footer() {
               <Image
                 src="/images/logo.jpg"
                 alt="Covenant Care Services LLC"
-                width={180}
-                height={72}
-                className="h-16 w-auto"
+                width={220}
+                height={88}
+                className="h-20 w-auto"
               />
             </div>
             <p className="text-blue-200 leading-relaxed text-sm max-w-sm mb-6">
