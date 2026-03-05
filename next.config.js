@@ -12,7 +12,7 @@ const nextConfig = {
       },
     ],
   },
-  allowedDevOrigins: ['*'],
+  allowedDevOrigins: ['*.replit.dev', '*.repl.co', '*.kirk.replit.dev', 'localhost'],
 }
 
 module.exports = nextConfig

@@ -3,83 +3,106 @@
 import React from 'react';
 import Layout from '../../components/layout/Layout';
 import ClientIntakeUploadForm from '../../components/request-services/ClientIntakeUploadForm';
-import { Download, Phone, Mail, CheckCircle } from 'lucide-react';
+import { Download, Phone, Mail, CheckCircle, ArrowRight, FileText } from 'lucide-react';
 
 export default function RequestServicesPage() {
   return (
     <Layout>
       <div className="min-h-screen bg-white">
-        <section className="bg-brand-navy py-16 md:py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-brand-blue-300 text-sm font-semibold uppercase tracking-widest mb-3">Get Started</p>
+        <section className="bg-brand-navy py-20 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full transform translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-green-500 rounded-full transform -translate-x-1/2 translate-y-1/2" />
+          </div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="inline-flex items-center gap-2 text-brand-green-400 font-semibold text-sm mb-3">
+              <span className="w-8 h-px bg-brand-green-400" />
+              Get Started
+            </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Request Services</h1>
-            <p className="text-blue-200 max-w-2xl leading-relaxed">
+            <p className="text-blue-200 max-w-xl leading-relaxed">
               Download the client intake form, complete it, and upload it below. A care coordinator will follow up with you promptly.
             </p>
           </div>
         </section>
 
         <section className="py-16">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
-              <div className="lg:col-span-1 space-y-6">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+              <div className="lg:col-span-2 space-y-5">
                 <div>
-                  <h2 className="text-lg font-bold text-brand-navy mb-2">How to Get Started</h2>
-                  <ol className="space-y-4">
+                  <div className="inline-flex items-center gap-2 text-brand-green-600 font-semibold text-sm mb-3">
+                    <span className="w-8 h-px bg-brand-green-500" />
+                    How to Apply
+                  </div>
+                  <h2 className="text-2xl font-bold text-brand-navy mb-5">Simple 4-Step Process</h2>
+                  <ol className="space-y-5">
                     {[
-                      'Download the Client Intake Form below.',
-                      'Complete and sign all sections of the form.',
-                      'Upload the completed form using the form on the right.',
-                      'A care coordinator will contact you within one business day.',
+                      'Download and print the Client Intake Form below.',
+                      'Complete and sign all sections of the form clearly.',
+                      'Scan or photograph the completed form.',
+                      'Upload it using the form — a coordinator will follow up within one business day.',
                     ].map((step, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm text-gray-600">
-                        <span className="w-5 h-5 rounded-full bg-brand-blue-700 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <li key={idx} className="flex items-start gap-4">
+                        <span className="w-8 h-8 rounded-full bg-brand-navy text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
                           {idx + 1}
                         </span>
-                        {step}
+                        <span className="text-gray-600 text-sm leading-relaxed pt-1">{step}</span>
                       </li>
                     ))}
                   </ol>
                 </div>
 
-                <div className="border border-gray-100 rounded-lg p-5">
-                  <h3 className="font-semibold text-brand-navy mb-2 text-sm">Client Intake Form</h3>
-                  <p className="text-gray-500 text-xs mb-4">Download the PDF, fill it out, then upload it using the form.</p>
+                <div className="bg-brand-blue-50 border border-brand-blue-100 rounded-2xl p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 bg-brand-blue-700 rounded-xl flex items-center justify-center">
+                      <FileText className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-brand-navy text-sm">Client Intake Form</h3>
+                      <p className="text-gray-500 text-xs">PDF format</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-500 text-xs mb-4">Download, complete, then upload below.</p>
                   <a
                     href="/forms/EmploymentApplication.pdf"
                     download
-                    className="inline-flex items-center gap-2 bg-brand-blue-700 hover:bg-brand-blue-800 text-white px-4 py-2.5 rounded text-sm font-semibold transition-colors"
+                    className="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-blue-800 text-white px-5 py-2.5 rounded-full text-xs font-semibold transition-colors w-full justify-center"
                   >
-                    <Download className="w-4 h-4" />
+                    <Download className="w-3.5 h-3.5" />
                     Download Form (PDF)
                   </a>
                 </div>
 
-                <div className="border border-gray-100 rounded-lg p-5">
+                <div className="border border-gray-100 rounded-2xl p-5 bg-gray-50">
                   <h3 className="font-semibold text-brand-navy mb-3 text-sm">Need Help?</h3>
                   <div className="space-y-3">
-                    <a href="tel:+12072528470" className="flex items-center gap-2 text-gray-600 hover:text-brand-blue-700 text-sm transition-colors">
-                      <Phone className="w-4 h-4 text-brand-blue-600" />
+                    <a href="tel:+12072528470" className="flex items-center gap-3 text-sm text-gray-600 hover:text-brand-navy transition-colors">
+                      <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shadow-sm">
+                        <Phone className="w-4 h-4 text-brand-blue-700" />
+                      </div>
                       (207) 252-8470
                     </a>
-                    <a href="mailto:contact@covenantcareservices.org" className="flex items-center gap-2 text-gray-600 hover:text-brand-blue-700 text-sm transition-colors">
-                      <Mail className="w-4 h-4 text-brand-blue-600" />
+                    <a href="mailto:contact@covenantcareservices.org" className="flex items-center gap-3 text-sm text-gray-600 hover:text-brand-navy transition-colors">
+                      <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shadow-sm">
+                        <Mail className="w-4 h-4 text-brand-blue-700" />
+                      </div>
                       contact@covenantcareservices.org
                     </a>
                   </div>
                 </div>
 
-                <div className="bg-gray-50 rounded-lg p-5 border border-gray-100">
-                  <h3 className="font-semibold text-brand-navy mb-3 text-sm">What Happens Next</h3>
-                  <ul className="space-y-2">
+                <div className="bg-brand-navy rounded-2xl p-5 text-white">
+                  <h3 className="font-semibold mb-4 text-sm text-brand-green-400 uppercase tracking-wide">What Happens Next</h3>
+                  <ul className="space-y-3">
                     {[
                       'Intake review by a care coordinator',
                       'Assessment of service needs',
                       'Authorized Service Plan created',
                       'Care begins with a matched PSS',
                     ].map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-gray-500 text-xs">
-                        <CheckCircle className="w-3.5 h-3.5 text-brand-blue-500 flex-shrink-0 mt-0.5" />
+                      <li key={item} className="flex items-start gap-3 text-blue-100 text-xs">
+                        <CheckCircle className="w-4 h-4 text-brand-green-400 flex-shrink-0 mt-0.5" />
                         {item}
                       </li>
                     ))}
@@ -87,8 +110,14 @@ export default function RequestServicesPage() {
                 </div>
               </div>
 
-              <div className="lg:col-span-2">
-                <h2 className="text-lg font-bold text-brand-navy mb-6">Upload Completed Intake Form</h2>
+              <div className="lg:col-span-3">
+                <div className="mb-6">
+                  <div className="inline-flex items-center gap-2 text-brand-green-600 font-semibold text-sm mb-2">
+                    <span className="w-8 h-px bg-brand-green-500" />
+                    Upload Form
+                  </div>
+                  <h2 className="text-2xl font-bold text-brand-navy">Submit Your Intake Form</h2>
+                </div>
                 <ClientIntakeUploadForm />
               </div>
             </div>

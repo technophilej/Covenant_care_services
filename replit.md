@@ -5,33 +5,46 @@ A Next.js website for Covenant Care Services LLC, a Maine-based Personal Care Ag
 
 ## Tech Stack
 - **Framework**: Next.js 16 (App Router) with Turbopack
-- **Styling**: Tailwind CSS
+- **Styling**: Tailwind CSS with custom brand colors
 - **UI Components**: Radix UI primitives, shadcn/ui-style components
 - **Icons**: Lucide React
 - **Language**: JavaScript (JSX)
 
-## Design
-- Inspired by saferesidential.care — clean, professional healthcare aesthetic
-- Deep navy (`brand-navy: #0B3A66`) as primary brand color with blue accent scale
-- Clean white/gray-50 alternating sections
-- Simple card-based layouts (no heavy animations)
-- Consistent page banners: navy background with white text and a small label above the heading
-- Navigation: fixed white bar, logo left, links center, solid CTA button right
+## Design System
+Inspired by saferesidential.care — clean, professional healthcare aesthetic, unique to Covenant Care.
+
+### Colors (from logo)
+- `brand-navy` (#0B3A66) — deep navy, primary brand color
+- `brand-blue` scale — medium blue accent
+- `brand-green` scale — green from logo, used for accents/CTAs
+- `brand-teal` scale — teal accent
+
+### Navigation (two-tier, like reference site)
+- **Top bar**: Navy background, "Compassion. Dignity. Support." tagline left, phone/email/hours right
+- **Main nav**: White, sticky on scroll (adds shadow), logo left, nav links center, "Request Services" pill button right
+- Active link: green underline indicator
+- Careers is a shortcut to /contact?tab=careers — Contact link highlights when on /contact
+
+### Page Layout Pattern
+- **Banner**: Navy background with decorative circle accents, green section label, bold white heading, subtitle
+- **Sections**: Alternating white and gray-50 with clear section labels (green dash + label above headings)
+- **Cards**: Rounded with subtle borders and hover shadow lift
+- **CTAs**: Navy or green pill buttons with arrow icons
 
 ## Pages
-- `/` — Home: hero, about/services overview (ADL/IADL lists), service highlights grid, How It Works, staff section, CTA
-- `/services` — Services: all 8 services in a 4-col card grid with feature lists, CTA
-- `/contact` — Contact: contact info bar, tab switcher (Contact Us / Careers), contact form or application form, privacy policy
-- `/request-services` — Request Services: step-by-step instructions, PDF download, intake form upload
+- `/` — Home: hero with full-width image, about (2-col with caregiver photo), service highlights grid, How It Works, staff section (navy bg), final CTA
+- `/services` — Services: all 8 services alternating image/text with real photos + feature lists, CTA
+- `/contact` — Contact: contact info bar, tab switcher (Contact Us / Careers), forms, privacy policy
+- `/request-services` — Request Services: step-by-step instructions sidebar, PDF download, upload form
 
 ## Project Structure
 - `app/` — Next.js App Router pages
-- `components/layout/` — Navigation, Footer, Layout wrapper
-- `components/home/` — HeroSection
+- `components/layout/` — Navigation (two-tier), Footer, Layout wrapper
+- `components/home/` — HeroSection (full-width image with overlay)
 - `components/contact/` — ContactForm, ApplicationForm
 - `components/request-services/` — ClientIntakeUploadForm
-- `components/ui/` — Radix-based primitives (button, input, label, etc.)
-- `public/images/` — Static images (logo.jpg is currently a 0-byte placeholder — needs real logo)
+- `components/ui/` — Radix-based primitives
+- `public/images/` — All real images (logo.jpg, hero.jpg, service photos, contact photos)
 - `public/forms/` — Downloadable PDF forms
 
 ## Running the App
@@ -45,6 +58,6 @@ A Next.js website for Covenant Care Services LLC, a Maine-based Personal Care Ag
 - `allowedDevOrigins` set to `['*']` to allow Replit preview domains
 - Dependencies installed with `--legacy-peer-deps` due to ESLint peer dep conflict between eslint@8 and @eslint/js@10
 
-## Known Issues / To-Do
-- `public/images/logo.jpg` is a 0-byte placeholder — the client must upload their real logo file
-- External image domains configured: `images.unsplash.com`, `qtrypzzcjebvfcihiynt.supabase.co`
+## External Images
+- `images.unsplash.com`
+- `qtrypzzcjebvfcihiynt.supabase.co`

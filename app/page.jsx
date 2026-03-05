@@ -1,28 +1,33 @@
 import HeroSection from '../components/home/HeroSection'
 import Layout from '../components/layout/Layout'
 import Link from 'next/link'
-import { Heart, Home, Users, Clock, CheckCircle, ArrowRight } from 'lucide-react'
+import Image from 'next/image'
+import { Heart, Home, Users, Clock, CheckCircle, ArrowRight, Star, Shield } from 'lucide-react'
 
 const serviceHighlights = [
   {
     icon: Heart,
     title: 'Personal Care',
-    description: 'Assistance with bathing, grooming, dressing, toileting, and personal hygiene.',
+    description: 'Compassionate help with bathing, grooming, dressing, and daily hygiene to maintain dignity and independence.',
+    color: 'bg-blue-50 text-brand-blue-700',
   },
   {
     icon: Home,
     title: 'Companion Care',
-    description: 'Meaningful companionship and light housekeeping to support daily living.',
+    description: 'Meaningful companionship, light housekeeping, and support with everyday activities to enrich daily life.',
+    color: 'bg-green-50 text-brand-green-600',
   },
   {
     icon: Users,
     title: 'Respite Care',
-    description: 'Temporary relief for family caregivers with flexible scheduling.',
+    description: 'Temporary, reliable relief for family caregivers with flexible scheduling to fit every situation.',
+    color: 'bg-teal-50 text-teal-700',
   },
   {
     icon: Clock,
     title: 'Hourly & Live-In Care',
-    description: 'Flexible care from a few hours a week to around-the-clock assistance.',
+    description: 'Flexible care from a few hours per week to 24/7 around-the-clock live-in assistance.',
+    color: 'bg-indigo-50 text-indigo-700',
   },
 ]
 
@@ -34,13 +39,13 @@ const steps = [
   },
   {
     num: '02',
-    title: 'Service Plan',
-    body: 'Care is delivered according to an authorized Service Plan including the type of services and their frequency.',
+    title: 'Authorized Service Plan',
+    body: 'Care is delivered according to an authorized Service Plan that specifies services and their frequency.',
   },
   {
     num: '03',
     title: 'Ongoing Review',
-    body: 'Plans are reviewed annually and updated whenever there is a change in the member\'s condition.',
+    body: 'Service plans are reviewed annually and updated whenever there is a change in the member\'s condition.',
   },
 ]
 
@@ -53,47 +58,68 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-brand-blue-700 text-sm font-semibold uppercase tracking-widest mb-3">About Us</p>
+              <div className="inline-flex items-center gap-2 text-brand-green-600 font-semibold text-sm mb-3">
+                <span className="w-8 h-px bg-brand-green-500" />
+                About Us
+              </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-brand-navy leading-tight mb-6">
-                Supporting Independence Across Maine
+                Supporting Independence<br />Across Maine
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-5">
+              <p className="text-gray-600 leading-relaxed mb-5 text-lg">
                 Covenant Care Services LLC is a Maine-based Personal Care Agency providing in-home assistance with Activities of Daily Living (ADLs) and Instrumental Activities of Daily Living (IADLs) through trained Personal Support Specialists.
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
                 All care is delivered in the member's place of residence, in accordance with an authorized Service Plan. We do not operate residential care facilities or group home settings.
               </p>
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 text-brand-blue-700 font-semibold hover:text-brand-blue-800 transition-colors group text-sm"
-              >
-                View all our services
+
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                {[
+                  { label: 'ADL Services', items: ['Bathing', 'Grooming', 'Dressing', 'Toileting', 'Transfers', 'Personal Hygiene'] },
+                  { label: 'IADL Services', items: ['Meal Preparation', 'Laundry', 'Housekeeping', 'Shopping', 'Transportation', 'Med Reminders'] },
+                ].map((col) => (
+                  <div key={col.label} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                    <h3 className="font-bold text-brand-navy text-xs uppercase tracking-widest mb-3">{col.label}</h3>
+                    <ul className="space-y-1.5">
+                      {col.items.map((item) => (
+                        <li key={item} className="flex items-center gap-2 text-gray-600 text-sm">
+                          <CheckCircle className="w-3.5 h-3.5 text-brand-green-500 flex-shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+
+              <Link href="/services" className="inline-flex items-center gap-2 text-brand-navy font-semibold hover:text-brand-blue-700 transition-colors group text-sm">
+                View all services
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div className="bg-gray-50 rounded-lg p-6 border border-gray-100">
-                <h3 className="font-bold text-brand-navy mb-4 text-sm uppercase tracking-wide">ADL Services</h3>
-                <ul className="space-y-2">
-                  {['Bathing', 'Grooming', 'Dressing', 'Toileting', 'Eating Assistance', 'Transfers', 'Personal Hygiene'].map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-gray-600 text-sm">
-                      <CheckCircle className="w-3.5 h-3.5 text-brand-blue-600 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/contact/caregiver-with-client.jpg"
+                  alt="Caregiver with client"
+                  width={600}
+                  height={500}
+                  className="w-full h-[480px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/40 to-transparent" />
               </div>
-              <div className="bg-gray-50 rounded-lg p-6 border border-gray-100">
-                <h3 className="font-bold text-brand-navy mb-4 text-sm uppercase tracking-wide">IADL Services</h3>
-                <ul className="space-y-2">
-                  {['Meal Preparation', 'Laundry', 'Light Housekeeping', 'Shopping', 'Transportation', 'Managing Finances', 'Medication Reminders'].map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-gray-600 text-sm">
-                      <CheckCircle className="w-3.5 h-3.5 text-brand-blue-600 flex-shrink-0" />
-                      {item}
-                    </li>
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5 max-w-[200px]">
+                <div className="flex items-center gap-1 mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                   ))}
-                </ul>
+                </div>
+                <p className="text-brand-navy font-semibold text-sm">Trusted by Maine families</p>
+                <p className="text-gray-500 text-xs mt-1">Compassionate, certified care</p>
+              </div>
+              <div className="absolute -top-5 -right-5 bg-brand-green-500 text-white rounded-2xl shadow-lg p-4 text-center">
+                <Shield className="w-7 h-7 mx-auto mb-1" />
+                <p className="text-xs font-bold">Licensed<br />& Insured</p>
               </div>
             </div>
           </div>
@@ -102,27 +128,26 @@ export default function HomePage() {
 
       <section className="py-20 bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
             <div>
-              <p className="text-brand-blue-700 text-sm font-semibold uppercase tracking-widest mb-2">What We Offer</p>
+              <div className="inline-flex items-center gap-2 text-brand-green-600 font-semibold text-sm mb-3">
+                <span className="w-8 h-px bg-brand-green-500" />
+                What We Offer
+              </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-brand-navy">Our Services</h2>
             </div>
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-2 bg-brand-blue-700 hover:bg-brand-blue-800 text-white px-5 py-2.5 rounded text-sm font-semibold transition-colors flex-shrink-0"
-            >
-              All Services
-              <ArrowRight className="w-4 h-4" />
+            <Link href="/services" className="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-blue-800 text-white px-6 py-3 rounded-full text-sm font-semibold transition-colors flex-shrink-0">
+              See All Services <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {serviceHighlights.map((service) => (
-              <div key={service.title} className="bg-white rounded-lg p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-11 h-11 bg-brand-blue-50 rounded flex items-center justify-center mb-5">
-                  <service.icon className="w-5 h-5 text-brand-blue-700" />
+              <div key={service.title} className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${service.color}`}>
+                  <service.icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-bold text-brand-navy mb-2">{service.title}</h3>
+                <h3 className="font-bold text-brand-navy text-lg mb-2">{service.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{service.description}</p>
               </div>
             ))}
@@ -132,81 +157,119 @@ export default function HomePage() {
 
       <section className="py-20 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <p className="text-brand-blue-700 text-sm font-semibold uppercase tracking-widest mb-2">Getting Started</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-brand-navy">How It Works</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {steps.map((step) => (
-              <div key={step.title} className="relative">
-                <span className="text-5xl font-bold text-gray-100 select-none">{step.num}</span>
-                <div className="-mt-6">
-                  <h3 className="text-xl font-bold text-brand-navy mb-3">{step.title}</h3>
-                  <p className="text-gray-500 leading-relaxed text-sm">{step.body}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative order-2 lg:order-1">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/home/hero.jpg"
+                  alt="In-home care process"
+                  width={600}
+                  height={440}
+                  className="w-full h-[420px] object-cover"
+                />
+                <div className="absolute inset-0 bg-brand-navy/50" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white px-8">
+                    <p className="text-5xl font-bold mb-2">3</p>
+                    <p className="text-xl font-semibold">Simple Steps</p>
+                    <p className="text-blue-200 text-sm mt-1">to quality care at home</p>
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <div className="inline-flex items-center gap-2 text-brand-green-600 font-semibold text-sm mb-3">
+                <span className="w-8 h-px bg-brand-green-500" />
+                Getting Started
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-brand-navy mb-10">How It Works</h2>
+              <div className="space-y-8">
+                {steps.map((step, idx) => (
+                  <div key={step.title} className="flex gap-5">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-sm flex items-center justify-center">
+                      {step.num}
+                    </div>
+                    <div className="pt-2">
+                      <h3 className="font-bold text-brand-navy text-lg mb-2">{step.title}</h3>
+                      <p className="text-gray-500 leading-relaxed text-sm">{step.body}</p>
+                      {idx < steps.length - 1 && <div className="w-px h-6 bg-gray-200 ml-[-29px] mt-4 ml-0" />}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="py-20 bg-brand-navy relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full transform translate-x-1/3 -translate-y-1/3" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-green-500 rounded-full transform -translate-x-1/3 translate-y-1/3" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-brand-blue-700 text-sm font-semibold uppercase tracking-widest mb-2">Our Team</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-brand-navy mb-6">Qualified, Caring Staff</h2>
-              <p className="text-gray-600 leading-relaxed mb-5">
+              <div className="inline-flex items-center gap-2 text-brand-green-400 font-semibold text-sm mb-3">
+                <span className="w-8 h-px bg-brand-green-400" />
+                Our Team
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Qualified, Caring Staff</h2>
+              <p className="text-blue-200 leading-relaxed mb-5">
                 All direct care staff must hold CNA or PSS certification, or be enrolled in a Department-approved Personal Support Specialist training program within 60 days of hire.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-8">
+              <p className="text-blue-200 leading-relaxed mb-8">
                 We are committed to placing only qualified, compassionate caregivers in your home — people who treat every member with the dignity and respect they deserve.
               </p>
               <Link
                 href="/contact?tab=careers"
-                className="inline-flex items-center gap-2 text-brand-blue-700 font-semibold hover:text-brand-blue-800 transition-colors group text-sm"
+                className="inline-flex items-center gap-2 bg-brand-green-500 hover:bg-brand-green-600 text-white px-7 py-3.5 rounded-full font-semibold text-sm transition-colors"
               >
-                Join our team
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                Join Our Team <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <div className="bg-brand-blue-700 rounded-lg p-10 text-white">
-              <h3 className="text-xl font-bold mb-6">Staff Requirements</h3>
-              <ul className="space-y-4">
-                {[
-                  'CNA or PSS certification required',
-                  'Enrollment in approved PSS training within 60 days of hire',
-                  'Background check completed',
-                  'Ongoing training and supervision provided',
-                  'Care delivered per authorized Service Plan',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-blue-100 text-sm">
-                    <CheckCircle className="w-4 h-4 mt-0.5 text-blue-300 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+            <div className="space-y-3">
+              {[
+                'CNA or PSS certification required',
+                'Enrollment in approved PSS training within 60 days of hire',
+                'Background checks completed for all staff',
+                'Ongoing training and supervision provided',
+                'Care delivered per authorized Service Plan',
+                'Compassionate, dignity-first approach',
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 bg-white/10 rounded-xl p-4">
+                  <CheckCircle className="w-5 h-5 text-brand-green-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-blue-100 text-sm">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-brand-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Need In-Home Personal Care?</h2>
-          <p className="text-blue-200 mb-10 max-w-xl mx-auto">
-            Contact us today to learn how we can support your loved one.
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 text-brand-green-600 font-semibold text-sm mb-3">
+            <span className="w-8 h-px bg-brand-green-500" />
+            Get Started Today
+            <span className="w-8 h-px bg-brand-green-500" />
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-brand-navy mb-4">Ready to Get the Care You Need?</h2>
+          <p className="text-gray-500 mb-10 leading-relaxed">
+            Contact us to learn how we can support your loved one's independence and well-being at home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/request-services"
-              className="inline-flex items-center justify-center bg-white text-brand-navy hover:bg-gray-100 px-8 py-3.5 rounded font-semibold text-sm transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-brand-navy hover:bg-brand-blue-800 text-white px-8 py-4 rounded-full font-semibold text-sm transition-colors shadow-lg"
             >
               Request Services
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <a
               href="tel:+12072528470"
-              className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 text-white px-8 py-3.5 rounded font-semibold text-sm transition-colors"
+              className="inline-flex items-center justify-center gap-2 border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white px-8 py-4 rounded-full font-semibold text-sm transition-all duration-200"
             >
               Call (207) 252-8470
             </a>

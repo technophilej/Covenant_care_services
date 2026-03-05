@@ -1,32 +1,50 @@
 import React from 'react';
 import Link from 'next/link';
-import { Phone, ShieldCheck, Users, Heart } from 'lucide-react';
+import Image from 'next/image';
+import { Phone, ShieldCheck, Users, Heart, ArrowRight } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="bg-brand-navy py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="text-brand-blue-300 text-sm font-semibold uppercase tracking-widest mb-4">
-            Maine-Based Personal Care Agency
-          </p>
+    <section className="relative min-h-[88vh] flex items-center overflow-hidden">
+      <div className="absolute inset-0">
+        <Image
+          src="/images/home/hero.jpg"
+          alt="Compassionate in-home care"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/92 via-brand-navy/75 to-brand-navy/30" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+        <div className="max-w-2xl">
+          <div className="inline-flex items-center gap-2 bg-brand-green-500/20 border border-brand-green-400/30 rounded-full px-4 py-1.5 mb-6">
+            <span className="w-2 h-2 rounded-full bg-brand-green-400" />
+            <span className="text-brand-green-300 text-xs font-semibold tracking-wide uppercase">Maine-Based Personal Care Agency</span>
+          </div>
+
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Compassionate Care,<br />Right at Home
+            Compassionate Care,{' '}
+            <span className="text-brand-green-400">Right at Home</span>
           </h1>
-          <p className="text-lg text-blue-200 leading-relaxed mb-10 max-w-2xl">
-            Covenant Care Services LLC provides in-home personal care assistance to help members live safely and with dignity in their own homes across Maine.
+
+          <p className="text-lg text-blue-100 leading-relaxed mb-10 max-w-xl">
+            Covenant Care Services LLC provides in-home personal care assistance — helping members live safely, independently, and with dignity in their own homes across Maine.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-14">
             <Link
               href="/request-services"
-              className="inline-flex items-center justify-center bg-white text-brand-navy hover:bg-gray-100 px-7 py-3.5 rounded font-semibold text-sm transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 bg-brand-green-500 hover:bg-brand-green-600 text-white px-8 py-4 rounded-full font-semibold text-sm transition-all duration-200 shadow-lg group"
             >
               Request Services
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Link>
             <a
               href="tel:+12072528470"
-              className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 text-white px-7 py-3.5 rounded font-semibold text-sm transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/25 text-white px-8 py-4 rounded-full font-semibold text-sm transition-all duration-200"
             >
               <Phone className="w-4 h-4" />
               (207) 252-8470
@@ -39,14 +57,16 @@ export default function HeroSection() {
               { icon: Users, text: 'Certified Caregivers' },
               { icon: Heart, text: 'Person-Centered Care' },
             ].map((item) => (
-              <div key={item.text} className="flex items-center gap-2 text-blue-300">
-                <item.icon className="w-4 h-4" />
+              <div key={item.text} className="flex items-center gap-2 text-blue-200">
+                <item.icon className="w-4 h-4 text-brand-green-400" />
                 <span className="text-sm font-medium">{item.text}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }
