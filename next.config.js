@@ -12,7 +12,7 @@ const nextConfig = {
       },
     ],
   },
-  allowedDevOrigins: ['http://localhost:3000'],
+  allowedDevOrigins: ['*'],
 }
 
 module.exports = nextConfig
