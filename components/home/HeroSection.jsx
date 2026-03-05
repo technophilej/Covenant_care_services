@@ -1,108 +1,52 @@
-'use client'
-
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { ArrowRight, Phone, Shield, Heart, Users } from 'lucide-react';
+import { Phone, ShieldCheck, Users, Heart } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/home/hero.jpg"
-          alt="Caring for elderly"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-transparent" />
-      </div>
+    <section className="bg-brand-navy py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="text-brand-blue-300 text-sm font-semibold uppercase tracking-widest mb-4">
+            Maine-Based Personal Care Agency
+          </p>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            Compassionate Care,<br />Right at Home
+          </h1>
+          <p className="text-lg text-blue-200 leading-relaxed mb-10 max-w-2xl">
+            Covenant Care Services LLC provides in-home personal care assistance to help members live safely and with dignity in their own homes across Maine.
+          </p>
 
-      {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-2xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
-          >
-            Quality Care,{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-400 to-brand-blue-100">
-              Right at Home
-            </span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed"
-          >
-            At Covenant Care Services, we provide personalized, compassionate home care 
-            that allows your loved ones to thrive in the comfort of their own home. 
-            Serving families throughout Maine with dignity and respect.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 mb-12"
-          >
+          <div className="flex flex-col sm:flex-row gap-4 mb-14">
             <Link
               href="/request-services"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-8 py-4 rounded-full font-semibold shadow-xl shadow-brand-blue-600/20 hover:shadow-brand-blue-600/30 transition-all duration-300 group"
-              suppressHydrationWarning
+              className="inline-flex items-center justify-center bg-white text-brand-navy hover:bg-gray-100 px-7 py-3.5 rounded font-semibold text-sm transition-colors duration-200"
             >
               Request Services
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" suppressHydrationWarning />
             </Link>
             <a
               href="tel:+12072528470"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold border border-white/20 transition-all duration-300"
-              suppressHydrationWarning
+              className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 text-white px-7 py-3.5 rounded font-semibold text-sm transition-colors duration-200"
             >
-              <Phone className="w-5 h-5" suppressHydrationWarning />
+              <Phone className="w-4 h-4" />
               (207) 252-8470
             </a>
-          </motion.div>
+          </div>
 
-          {/* Trust Indicators */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap gap-6"
-          >
+          <div className="flex flex-wrap gap-6">
             {[
-              { icon: Shield, text: 'Licensed & Insured' },
-              { icon: Users, text: 'Experienced Caregivers' },
-              { icon: Heart, text: '24/7 Support Available' },
-            ].map((item, index) => (
-              <div key={index} className="flex items-center gap-2 text-gray-300" suppressHydrationWarning>
-                <item.icon className="w-5 h-5 text-brand-blue-100" suppressHydrationWarning />
+              { icon: ShieldCheck, text: 'Licensed & Insured' },
+              { icon: Users, text: 'Certified Caregivers' },
+              { icon: Heart, text: 'Person-Centered Care' },
+            ].map((item) => (
+              <div key={item.text} className="flex items-center gap-2 text-blue-300">
+                <item.icon className="w-4 h-4" />
                 <span className="text-sm font-medium">{item.text}</span>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }
-

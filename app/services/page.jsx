@@ -1,12 +1,10 @@
 'use client'
 
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Heart, Home, Users, Clock, Utensils, Car, Pill,
-  Brain, Sparkles, Phone, ArrowRight, CheckCircle2 
+import {
+  Heart, Home, Users, Clock, Utensils, Car, Pill, Brain, CheckCircle, Phone, ArrowRight
 } from 'lucide-react';
-import Image from 'next/image';
+import Link from 'next/link';
 import Layout from '../../components/layout/Layout';
 
 const services = [
@@ -14,113 +12,49 @@ const services = [
     icon: Heart,
     title: 'Personal Care',
     description: 'Our trained caregivers provide compassionate assistance with daily living activities to help maintain dignity and independence.',
-    features: [
-      'Bathing and personal hygiene',
-      'Dressing assistance',
-      'Grooming and hair care',
-      'Mobility support',
-      'Toileting assistance',
-      'Skin and nail care',
-    ],
-    image: '/images/services/personal-care.jpg',
+    features: ['Bathing and personal hygiene', 'Dressing assistance', 'Grooming and hair care', 'Mobility support', 'Toileting assistance', 'Skin and nail care'],
   },
   {
     icon: Home,
     title: 'Companion Care',
     description: 'Meaningful companionship that promotes emotional well-being and social engagement for your loved ones.',
-    features: [
-      'Conversation and social interaction',
-      'Playing games and puzzles',
-      'Reading together',
-      'Accompaniment to appointments',
-      'Light housekeeping',
-      'Meal planning and preparation',
-    ],
-    image: '/images/services/companion-care.jpg',
+    features: ['Conversation and social interaction', 'Playing games and puzzles', 'Reading together', 'Accompaniment to appointments', 'Light housekeeping', 'Meal planning and preparation'],
   },
   {
     icon: Users,
     title: 'Respite Care',
     description: 'Temporary relief for family caregivers, allowing them to rest while ensuring quality care continues.',
-    features: [
-      'Short-term care coverage',
-      'Emergency care needs',
-      'Vacation coverage',
-      'Weekend relief',
-      'Overnight care',
-      'Flexible scheduling',
-    ],
-    image: '/images/services/respite-care.jpg',
+    features: ['Short-term care coverage', 'Emergency care needs', 'Vacation coverage', 'Weekend relief', 'Overnight care', 'Flexible scheduling'],
   },
   {
     icon: Clock,
     title: 'Hourly & Live-In Care',
     description: 'Flexible care options ranging from a few hours a week to around-the-clock live-in assistance.',
-    features: [
-      'Minimum 4-hour visits',
-      'Full-day care options',
-      '24/7 live-in care',
-      'Night shift coverage',
-      'Weekend care',
-      'Holiday coverage',
-    ],
-    image: '/images/services/hourly-live-in.jpg',
+    features: ['Minimum 4-hour visits', 'Full-day care options', '24/7 live-in care', 'Night shift coverage', 'Weekend care', 'Holiday coverage'],
   },
   {
     icon: Utensils,
     title: 'Meal Preparation',
     description: 'Nutritious meal planning and preparation tailored to dietary needs and preferences.',
-    features: [
-      'Meal planning',
-      'Grocery shopping',
-      'Cooking and preparation',
-      'Special diet accommodations',
-      'Feeding assistance',
-      'Kitchen cleanup',
-    ],
-    image: '/images/services/meal-prep.jpg',
+    features: ['Meal planning', 'Grocery shopping', 'Cooking and preparation', 'Special diet accommodations', 'Feeding assistance', 'Kitchen cleanup'],
   },
   {
     icon: Car,
     title: 'Transportation',
     description: 'Safe and reliable transportation to appointments, errands, and social activities.',
-    features: [
-      'Medical appointments',
-      'Grocery shopping',
-      'Social outings',
-      'Religious services',
-      'Family visits',
-      'Recreational activities',
-    ],
-    image: '/images/services/transportation.jpg',
+    features: ['Medical appointments', 'Grocery shopping', 'Social outings', 'Religious services', 'Family visits', 'Recreational activities'],
   },
   {
     icon: Pill,
     title: 'Medication Reminders',
     description: 'Assistance with medication management to ensure proper timing and dosage.',
-    features: [
-      'Medication reminders',
-      'Prescription pickup',
-      'Organizing pill boxes',
-      'Monitoring intake',
-      'Communication with pharmacy',
-      'Family updates',
-    ],
-    image: '/images/services/medication-reminders.jpg',
+    features: ['Medication reminders', 'Prescription pickup', 'Organizing pill boxes', 'Monitoring intake', 'Communication with pharmacy', 'Family updates'],
   },
   {
     icon: Brain,
-    title: 'Alzheimer\'s & Dementia Care',
+    title: "Alzheimer's & Dementia Care",
     description: 'Specialized care for individuals with memory-related conditions, focusing on safety and quality of life.',
-    features: [
-      'Memory care activities',
-      'Cognitive stimulation',
-      'Wandering prevention',
-      'Behavior management',
-      'Daily routine structure',
-      'Family education',
-    ],
-    image: '/images/services/dementia-care.jpg',
+    features: ['Memory care activities', 'Cognitive stimulation', 'Wandering prevention', 'Behavior management', 'Daily routine structure', 'Family education'],
   },
 ];
 
@@ -128,123 +62,62 @@ export default function Services() {
   return (
     <Layout>
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-brand-blue-700 to-brand-navy overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />
-          </div>
-
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-4xl sm:text-5xl font-bold text-white mb-6"
-            >
-              Our Services
-            </motion.h1>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-lg text-brand-blue-100 max-w-2xl mx-auto"
-            >
-              Discover our comprehensive range of home care services designed to meet 
-              the unique needs of every individual and family we serve.
-            </motion.p>
+        <section className="bg-brand-navy py-16 md:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-brand-blue-300 text-sm font-semibold uppercase tracking-widest mb-3">What We Offer</p>
+            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Our Services</h1>
+            <p className="text-blue-200 max-w-2xl leading-relaxed">
+              Comprehensive in-home personal care services delivered by trained Personal Support Specialists in accordance with an authorized Service Plan.
+            </p>
           </div>
         </section>
 
-        {/* Services List */}
-        <section className="py-24">
+        <section className="py-16 border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="space-y-24">
-              {services.map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-100px' }}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                    index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                  }`}
-                >
-                  {/* Image */}
-                  <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <div className="relative">
-                      <div className="relative w-full h-80">
-                        <Image
-                          src={service.image}
-                          alt={service.title}
-                          fill
-                          sizes="(min-width: 1024px) 50vw, 100vw"
-                          className="rounded-2xl shadow-2xl object-cover"
-                        />
-                      </div>
-                      <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-gradient-to-br from-brand-blue-600 to-brand-blue-500 rounded-2xl flex items-center justify-center shadow-lg">
-                        <service.icon className="w-10 h-10 text-white" />
-                      </div>
-                    </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {services.map((service) => (
+                <div key={service.title} className="border border-gray-100 rounded-lg p-6 hover:border-brand-blue-200 hover:shadow-sm transition-all">
+                  <div className="w-10 h-10 bg-brand-blue-50 rounded flex items-center justify-center mb-4">
+                    <service.icon className="w-5 h-5 text-brand-blue-700" />
                   </div>
-
-                  {/* Content */}
-                  <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                    <h2 className="text-3xl font-bold text-brand-navy mb-4">
-                      {service.title}
-                    </h2>
-                    <p className="text-lg text-brand-navy/75 mb-8 leading-relaxed">
-                      {service.description}
-                    </p>
-                    
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      {service.features.map((feature) => (
-                        <div key={feature} className="flex items-center gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-brand-blue-600 flex-shrink-0" />
-                          <span className="text-brand-navy/80">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </motion.div>
+                  <h2 className="font-bold text-brand-navy mb-2">{service.title}</h2>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">{service.description}</p>
+                  <ul className="space-y-1.5">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-2 text-gray-600 text-xs">
+                        <CheckCircle className="w-3 h-3 text-brand-blue-500 flex-shrink-0 mt-0.5" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-24 bg-gray-50">
+        <section className="py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl font-bold text-brand-navy mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-lg text-brand-navy/75 mb-10">
-                Contact us today for a free consultation. We'll work with you to create 
-                a personalized care plan that meets your family's unique needs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-700 hover:to-brand-blue-600 text-white px-8 py-4 rounded-full font-semibold shadow-xl shadow-brand-blue-600/20 hover:shadow-brand-blue-600/30 transition-all duration-300 group"
-                >
-                  Request a Consultation
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-                <a
-                  href="tel:+12072528470"
-                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-brand-navy px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300 border border-gray-200"
-                >
-                  <Phone className="w-5 h-5" />
-                  (207) 252-8470
-                </a>
-              </div>
-            </motion.div>
+            <h2 className="text-3xl font-bold text-brand-navy mb-4">Ready to Get Started?</h2>
+            <p className="text-gray-500 mb-10 leading-relaxed">
+              Contact us today. We will work with you to create a personalized care plan that meets your family's unique needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/request-services"
+                className="inline-flex items-center justify-center gap-2 bg-brand-blue-700 hover:bg-brand-blue-800 text-white px-8 py-3.5 rounded font-semibold text-sm transition-colors"
+              >
+                Request Services
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <a
+                href="tel:+12072528470"
+                className="inline-flex items-center justify-center gap-2 border border-gray-300 hover:border-gray-400 text-brand-navy px-8 py-3.5 rounded font-semibold text-sm transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                (207) 252-8470
+              </a>
+            </div>
           </div>
         </section>
       </div>
