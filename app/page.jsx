@@ -101,7 +101,7 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal direction="right">
-              <div className="relative overflow-hidden">
+              <div className="relative pt-6 pb-8 pl-0 sm:pl-6 pr-0 sm:pr-6">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=85"
@@ -112,7 +112,7 @@ export default function HomePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/40 to-transparent" />
                 </div>
-                <div className="absolute -bottom-6 left-2 sm:-left-6 bg-white rounded-2xl shadow-xl p-5 max-w-[200px]">
+                <div className="absolute bottom-0 left-4 sm:left-0 bg-white rounded-2xl shadow-xl p-5 max-w-[200px]">
                   <div className="flex items-center gap-1 mb-2" aria-label="5 out of 5 stars">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" aria-hidden="true" />
@@ -121,7 +121,7 @@ export default function HomePage() {
                   <p className="text-brand-navy font-semibold text-sm">Trusted by Maine families</p>
                   <p className="text-gray-600 text-xs mt-1">Compassionate, certified care</p>
                 </div>
-                <div className="absolute -top-5 right-2 sm:-right-5 bg-brand-green-500 text-white rounded-2xl shadow-lg p-4 text-center">
+                <div className="absolute top-0 right-4 sm:right-0 bg-brand-green-500 text-white rounded-2xl shadow-lg p-4 text-center">
                   <Shield className="w-7 h-7 mx-auto mb-1" aria-hidden="true" />
                   <p className="text-xs font-bold">Licensed<br />& Insured</p>
                 </div>
